@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Navbar */
+
+.garisbawah {
+    @apply flex relative h-full items-center after:absolute after:bottom-6 after:left-0 after:h-1 after:bg-blue-600 after:right-0 after:rounded-lg after:hover:w-full after:w-0 after:duration-300 after:ease-in-out;
+}
+
+
+
+/* Cart Sidebar */
+
+
+
+#cartbar{
+    transition: transform 0.3s ease;
+}
+
+.closecart {
+    transform: translate(900px);
+}
+
+.opencart {
+    transform: translate(0px);
+}
+
+.textProduk {
+    @apply font-poppins text-xl tracking-wide;
+}
+
+.textQty {
+    @apply text-gray-500 text-xs tracking-wide;
+}
+
+.textHarga {
+    @apply text-red-500 font-poppins font-thin text-[16px] tracking-wide;
+}
+
+/* Overlay */
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 20;
+    display: none;
+    background-color: #00000080;
+}
