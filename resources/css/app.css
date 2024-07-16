@@ -35,7 +35,7 @@
 }
 
 .textHarga {
-    @apply text-red-500 font-poppins font-thin text-[16px] tracking-wide;
+    @apply text-red-600 font-poppins font-thin text-[16px] tracking-wide;
 }
 
 /* Overlay */

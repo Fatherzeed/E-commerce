@@ -7,9 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/public.css')}}">
+    <link rel="stylesheet" href="/build/assets/app-2640cebe.css">
 
-    @vite('resources/css/app.css')
 
     <title>@yield('title')</title>
 </head>
@@ -18,9 +17,10 @@
     <div class="overlay duration-300 ease-in-out"></div>
     @yield('content')
 
-    <script src="{{ asset('js/partials.js') }}"></script>
-    @yield('script')
 
+    @yield('script')
+    <script src="/js/partials.js"></script>
+    <script src="/build/assets/app-9b01a8f6.js"></script>
 </body>
 
 </html>
