@@ -9,7 +9,12 @@ export default {
     extend: {
       fontFamily: {
         sans: ["sans-serif"],
-        poppins: ["Poppins"]
+        poppins: ["Poppins"],
+      },
+      colors: {
+        "active-100": '#96C9F4',
+        "active-150": '#3FA2F6',
+        "active-200": '#427D9D',
       },
     },
   },

@@ -12,9 +12,8 @@
     </div>
 </section>
 
-<section class="h-[80dvh]">
+@include('sections.produk')
 
-</section>
 <section class="h-[80dvh]">
 
 </section>

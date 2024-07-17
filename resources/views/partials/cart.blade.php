@@ -1,4 +1,4 @@
-<aside id="cartbar" class="closecart h-[100dvh] lg:w-[30dvw] md:w-[60dvw] w-[80dvw] border-2  bg-white fixed z-30 top-0 right-0 rounded-l-xl p-5 pr-10 lg:pr-5">
+<aside id="cartbar" class="closecart h-[100dvh] lg:w-[30dvw] md:w-[60dvw] w-[80dvw] border-2  bg-white fixed z-50 top-0 right-0 rounded-l-xl p-5 pr-10 lg:pr-5">
     <div class="w-full h-full grid grid-rows-8 scroll-m-2">
         <div class="mb-5">
             <button id="closeCartBtn" class="group absolute top-6 left-6"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="group text-black w-7 h-7 group-hover:text-blue-500" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -77,7 +77,7 @@
             <div class="col-span-2 items-center text-right"><h4 class="text-xl text-red-600 font-medium">Rp, 4,000,000</h4></div>
         </div>
         <div class="flex items-center justify-start px-10 gap-x-7 border-t">
-            <button id="checkoutBtn" class="w-auto h-auto px-3 py-2 bg-red-300 font-poppins font-medium rounded-md">Checkout</button>
+            <button id="checkoutBtn" class="w-auto h-auto px-3 py-2 bg-active-200 font-poppins font-medium rounded-md">Checkout</button>
         </div>
     </div>
 </aside>

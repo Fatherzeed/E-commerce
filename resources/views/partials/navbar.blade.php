@@ -1,4 +1,4 @@
-<nav class="bg-white shadow-lg w-screen sticky top-0 z-10">
+<nav class="bg-white shadow-lg w-screen sticky top-0 z-20">
     <div class="nav-container flex lg:max-w-6xl w-full h-20 mx-auto">
         <div class="content grid grid-cols-3 px-4 w-full">
             <div class="flex flex-shrink-0 items-center ">
