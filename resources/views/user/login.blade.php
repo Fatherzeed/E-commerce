@@ -24,15 +24,15 @@
                 </div>
                 <div class="mb-4 flex justify-between items-center">
                     <div>
-                        <input type="checkbox" name="remember" id="remember">
-                        <label for="remember" class="text-sm font-medium text-gray-700">Remember Me</label>
+                        {{-- <input type="checkbox" name="remember" id="remember">
+                        <label for="remember" class="text-sm font-medium text-gray-700">Remember Me</label> --}}
                     </div>
                     <a href="" class="text-sm text-sky-600">Forgot your password?</a>
                 </div>
                 <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md">Sign In</button>
             </form>
 
-            <p class="mt-3 text-center">don't have an account? <button id="registerButton" class="font-bold">Register here</button></p>
+            <p class="mt-3 text-center text-sm">don't have an account? <button id="registerButton" class="font-bold text-blue-500 ">Sign Up here</button></p>
         </div>
          {{-- register --}}
         <div class="w-1/2 p-8 bg-[#eee]">
@@ -55,10 +55,10 @@
                     <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirm Password</label>
                     <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirm Password" class="mt-1 block w-full p-2 border rounded-md italic text-sm">
                 </div>
-                <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md">Register</button>
+                <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md">Sign Up</button>
             </form>
 
-            <p class="mt-3 text-center">already have an account? <button id="loginButton"  class="font-bold">Login now!</button></p>
+            <p class="mt-3 text-center text-sm">already have an account? <button id="loginButton"  class="font-bold text-blue-500 ">Sign In!</button></p>
            
         </div>
     </div>
