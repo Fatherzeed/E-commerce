@@ -6,12 +6,12 @@
 
 <section class="bg-white flex items-center justify-center min-h-screen ">
     <div class="flex bg-[#eee] shadow-lg rounded-lg overflow-hidden w-2/5 max-h-[60dvh] relative items-center">
-        <div id="imageContainer" class=" absolute w-1/2 h-full overflow-hidden transform transition-transform duration-500">
-            <img src="{{ asset('image/img-login.jpg') }}" alt="" class="w-full h-full object-cover">
+        <div id="imageContainer" class="shift-right absolute w-1/2 h-full overflow-hidden transform transition-transform duration-500">
+            <img src="{{ asset('image/img-login.jpg') }}" alt="" class="w-full h-full object-cover object-left">
         </div> 
         {{-- login --}}
         <div class="w-1/2 p-8 bg-[#eee]">
-            <h2 class="text-6xl font-bold mb-6 text-center text-[75px]">Sh<span class="text-sky-600">op</span></h2>
+            <h2 class="text-6xl font-bold mb-6 text-center ">Sh<span class="text-sky-600">op</span></h2>
             <form action="" method="POST">
                 @csrf
                 <div class="mb-4">
@@ -36,7 +36,7 @@
         </div>
          {{-- register --}}
         <div class="w-1/2 p-8 bg-[#eee]">
-            <h2 class="text-6xl font-bold mb-6 text-center text-[75px]">Sh<span class="text-sky-600">op</span></h2>
+            <h2 class="text-6xl font-bold mb-6 text-center ">Sh<span class="text-sky-600">op</span></h2>
             <form action="" method="POST">
                 @csrf
                 <div class="mb-4">

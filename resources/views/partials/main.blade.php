@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link rel="stylesheet" href="/build/assets/app-9fcdeefe.css">
+    <link rel="stylesheet" href="/build/assets/app-04673827.css">
     @vite('resources/css/app.css')
 
 
