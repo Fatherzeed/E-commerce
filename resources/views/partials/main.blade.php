@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link rel="stylesheet" href="/build/assets/app-be69a4ab.css">
+    <link rel="stylesheet" href="/build/assets/app-9fcdeefe.css">
     @vite('resources/css/app.css')
 
 
@@ -22,6 +22,7 @@
     @yield('script')
     <script src="/js/partials.js"></script>
     <script src="/js/homeProduct.js"></script>
+    <script src="/js/login.js"></script>
     <script src="/build/assets/app-9b01a8f6.js"></script>
 </body>
 

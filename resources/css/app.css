@@ -8,13 +8,9 @@
     @apply flex relative h-full items-center after:absolute after:bottom-6 after:left-0 after:h-1 after:bg-blue-600 after:right-0 after:rounded-lg after:hover:w-full after:w-0 after:duration-300 after:ease-in-out;
 }
 
-
-
 /* Cart Sidebar */
 
-
-
-#cartbar{
+#cartbar {
     transition: transform 0.5s ease-in-out;
 }
 
@@ -83,4 +79,16 @@
     transform: translateX(-50px);
     transition: ease-in-out 300ms;
     opacity: 0; /* Ubah dari 0% menjadi 0 */
+}
+
+/* login */
+
+@layer components {
+    .shift-left {
+        @apply translate-x-0;
+    }
+
+    .shift-right {
+        @apply translate-x-full;
+    }
 }
