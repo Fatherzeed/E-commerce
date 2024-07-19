@@ -8,7 +8,7 @@
             <button id="arrow-right" class="arrow-right absolute right-0 bg-black bg-opacity-50 text-white p-2 cursor-pointer z-10">
                 &#10095;
             </button>
-            <div id="kategoriContainer" class="kategoriContainer flex flex-row p-2 overflow-x-auto scroll-smooth snap-x">
+            <div id="kategoriContainer" class="kategoriContainer flex flex-row p-2 overflow-x-auto scroll-smooth snap-x scrollbar-none">
                 <!-- Kategori Items -->
                 <div class="kategoriItem flex-shrink-0 snap-center w-80 h-100 p-4 mr-4 text-center overflow-hidden">
                     <div class="relative overflow-hidden w-full h-80">

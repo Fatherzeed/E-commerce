@@ -5,7 +5,7 @@
 /* Navbar */
 
 .garisbawah {
-    @apply flex relative h-full items-center after:absolute after:bottom-6 after:left-0 after:h-1 after:bg-blue-600 after:right-0 after:rounded-lg after:hover:w-full after:w-0 after:duration-300 after:ease-in-out;
+    @apply flex relative h-full items-center after:absolute after:bottom-4 after:left-0 after:h-1 after:bg-blue-600 after:right-0 after:rounded-lg after:hover:w-full after:w-0 after:duration-300 after:ease-in-out;
 }
 
 /* Cart Sidebar */
