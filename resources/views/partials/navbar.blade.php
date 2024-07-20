@@ -1,6 +1,6 @@
-    <nav class="bg-white shadow-lg w-screen sticky top-0 z-20">
-        <div class="nav-container flex lg:max-w-6xl w-full h-14 mx-auto">
-            <div class="content grid grid-cols-3 px-4 w-full">
+    <nav class="bg-white shadow-lg w-full sticky top-0 z-20">
+        <div class="nav-container flex lg:max-w-6xl w-[80%] h-14 mx-auto">
+            <div class="content grid grid-cols-5 px-4 w-full">
                 <div class="flex flex-shrink-0 items-center ">
                     <a class="flex flex-shrink-0 items-center hover:scale-110 duration-300 hover:skew-x-10 ease-in-out"
                         href="{{ route('home') }}">
@@ -9,11 +9,11 @@
                             class="lg:block hidden text-black text-3xl font-bold after:content-['op'] after:text-blue-600 ml-2">Sh</span></a>
                 </div>
                 
-                <div class="hidden w-full md:flex justify-center  items-center gap-x-10">
+                <div class="hidden col-span-3 w-full md:flex justify-center  items-center gap-x-10">
                     <a class="garisbawah" href="">Home</a>
                     <a class="garisbawah" href="">Categories</a>
                 </div>
-                <div class="hidden md:flex w-full lg:justify-start md:justify-center items-center gap-x-5 lg:ml-[80px]">
+                <div class="hidden md:flex w-full lg:justify-start md:justify-center items-center gap-x-5">
                     <button class="group">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                             class="group group-hover:text-blue-600  w-7 h-7" viewBox="0 0 24 24" stroke-width="1.3"

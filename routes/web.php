@@ -15,6 +15,10 @@ use App\Http\Controllers\LoginController;
 |
 */
 
+// Testing Route
+Route::get('/testhome', function() {
+    return view('home.testhome');
+});
 
 //Home
 Route::get('/', [HomeController::class, 'index'])->name('home');

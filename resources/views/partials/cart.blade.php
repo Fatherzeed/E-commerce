@@ -1,14 +1,13 @@
-<aside id="cartbar" class="closecart h-[100dvh] lg:w-[30dvw] md:w-[60dvw] w-[80dvw] border-2  bg-white fixed z-50 top-0 right-0 rounded-l-xl p-5 pr-10 lg:pr-5">
+<aside id="cartbar" class="closecart h-[100dvh] lg:w-[30dvw] md:w-[50dvw] w-[90dvw] border-2  bg-white fixed z-50 top-0 right-0 rounded-l-xl p-5 pr-10 lg:pr-5">
     <div class="w-full h-full grid grid-rows-8 scroll-m-2">
         <div class="mb-5">
             <button id="closeCartBtn" class="group absolute top-6 left-6"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="group text-black w-7 h-7 group-hover:text-blue-500" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
               </svg>
               </button>
-              <div class="text-right px-5  border-b">
+              <div class="text-right px-5 border-b">
                 <h2 class="font-poppins font-semibold text-3xl">Cart</h2>
-                <h4 class="tracking-wide text-sm text-gray-500">Total item di Keranjang : </h4><span>54</span>
-              </div>
+                <h4 class="tracking-wide text-sm text-gray-500">Total item di Keranjang : 54</h4></div>
         </div>
 
         {{-- Card Produk dalam Cart --}}
