@@ -13,7 +13,7 @@
                     class="group form-inline flex w-full items-center hover:scale-105 duration-300 hover:skew-x-10 ease-in-out"
                     action="" method="GET">
                     <input
-                        class="h-10  form-input flex-grow px-4 py-2 rounded-l-xl border-2 border-r-0 text-sm font-poppins group-hover:border-blue-700  active:border-blue-700 focus:outline-none"
+                        class="h-10  form-input flex-grow px-4 py-2 rounded-l-xl border-2 border-r-0 text-sm font-poppins group-hover:border-blue-700   focus:outline-none"
                         type="search" placeholder="Search Here..." aria-label="Search">
                     <button
                         class="h-10 my-2 -ml-px  px-4 py-2 border-2 border-l-0 rounded-r-xl group-hover:border-blue-700"
@@ -26,7 +26,7 @@
                     </button>
                 </form>
                 <a class="garisbawah font-poppins hover:scale-110 duration-300 hover:skew-x-10 ease-in-out"
-                    href="#">Home</a>
+                    href="{{ route('home') }}">Home</a>
                 <a class="garisbawah font-poppins hover:scale-110 duration-300 hover:skew-x-10 ease-in-out"
                     href="#">Categories</a>
             </div>

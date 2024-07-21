@@ -29,13 +29,13 @@
                         {{-- <input type="checkbox" name="remember" id="remember">
                         <label for="remember" class="text-sm font-medium text-gray-700">Remember Me</label> --}}
                     </div>
-                    <a href="" class="text-sm text-sky-600">Forgot your password?</a>
+                    <a href="" class="text-xs text-sky-600 font-poppins">Forgot your password?</a>
                 </div>
                 <button id="btnLogin" class="w-full bg-blue-500 text-white p-2 rounded-md">Sign In</button>
                 {{-- </form> --}}
 
-                <p class="mt-3 text-center text-sm">don't have an account? <button id="registerButton"
-                        class="font-bold text-blue-500 ">Sign Up here</button></p>
+                <p class="mt-3 text-center text-sm font-poppins">don't have an account? <button id="registerButton"
+                        class="font-bold text-blue-500 font-poppins">Sign Up here</button></p>
             </div>
             {{-- register --}}
             <div class="w-1/2 p-8 bg-[#eee]">
@@ -63,11 +63,11 @@
                         <input type="password" name="password_confirmation" id="password_confirmation"
                             placeholder="Confirm Password" class="mt-1 block w-full p-2 border rounded-md italic text-sm">
                     </div>
-                    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md">Sign Up</button>
+                    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md font-poppins">Sign Up</button>
                 </form>
 
-                <p class="mt-3 text-center text-sm">already have an account? <button id="loginButton"
-                        class="font-bold text-blue-500 ">Sign In!</button></p>
+                <p class="mt-3 text-center text-sm font-poppins">already have an account? <button id="loginButton"
+                        class="font-bold text-blue-500 font-poppins">Sign In!</button></p>
 
             </div>
         </div>
@@ -76,61 +76,5 @@
 @endsection
 
 @section('script')
-    <script>
-        $(document).ready(function() {
-
-            $("#btnLogin").click(function() {
-                var email = $("#username").val();
-                var password = $("#password").val();
-
-                if (!email) {
-                    showMessage("error", "Masukkan Username");
-                } else if (!password) {
-                    showMessage("error", "Masukkan Password");
-                }
-                
-                if (!navigator.onLine) {
-                    showMessage("error", "Koneksi Internet Error");
-                    return;
-                }
-
-                if (email && password) {
-                    Swal.fire({
-                        title: 'Cheking...',
-                        text: 'Please wait while we check data.',
-                        allowOutsideClick: false,
-                        didOpen: () => {
-                            Swal.showLoading();
-                        }
-                    });
-
-                    $.ajax({
-                        type: "GET", 
-                        url: "{{ route('ceklogin') }}",
-                        data: {
-                            "username": email,
-                            "password": password
-                        },
-                        success: function(response) {
-                            Swal.close();
-                            if (response.status === 'success') {
-                                window.location.href = response.redirect_url;
-                            } else {
-                                showMessage("error", response.message);
-                            }
-                        },
-                        error: function(xhr, status, error) {
-                            Swal.close();
-                            if (xhr.status === 401) {
-                                showMessage("error", "User Tidak Ditemukan");
-                            } else {
-                                showMessage("error", "Terjadi kesalahan. Silakan coba lagi.");
-                            }
-                        }
-                    });
-                }
-            });
-
-        });
-    </script>
+   
 @endsection
