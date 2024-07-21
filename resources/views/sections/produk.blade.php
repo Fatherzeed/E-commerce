@@ -10,7 +10,7 @@
             </button>
             <div id="kategoriContainer" class="kategoriContainer flex flex-row p-2 overflow-x-auto scroll-smooth snap-x scrollbar-none">
                 <!-- Kategori Items -->
-                <div class="kategoriItem flex-shrink-0 snap-center w-80 h-100 p-4 mr-4 text-center overflow-hidden">
+                <div class="kategoriItem flex-shrink-0 snap-center w-[340px] h-100 p-4 mr-4 text-center overflow-hidden">
                     <div class="relative overflow-hidden w-full h-80">
                         <img class="w-full h-80 object-cover rounded-md transform transition-transform duration-500 hover:scale-110"
                             src="{{ asset('image/product1.jpg') }}" alt="produk 1">
@@ -18,7 +18,7 @@
                     <h3 class="font-poppins font-semibold text-2xl mt-2">Baju Pria</h3>
                     <h4 class="text-red-600 font-poppins font-semibold text-md">Rp 1.000.000</h4>
                 </div>
-                <div class="kategoriItem flex-shrink-0 snap-center w-80 h-100 p-4 mr-4 text-center overflow-hidden">
+                <div class="kategoriItem flex-shrink-0 snap-center w-[340px] h-100 p-4 mr-4 text-center overflow-hidden">
                     <div class="relative overflow-hidden w-full h-80">
                         <img class="w-full h-80 object-cover rounded-md transform transition-transform duration-500 hover:scale-110"
                             src="{{ asset('image/product1.jpg') }}" alt="produk 1">
@@ -26,7 +26,7 @@
                     <h3 class="font-poppins font-semibold text-2xl mt-2">Baju Pria</h3>
                     <h4 class="text-red-600 font-poppins font-semibold text-md">Rp 1.000.000</h4>
                 </div>
-                <div class="kategoriItem flex-shrink-0 snap-center w-80 h-100 p-4 mr-4 text-center overflow-hidden">
+                <div class="kategoriItem flex-shrink-0 snap-center w-[340px] h-100 p-4 mr-4 text-center overflow-hidden">
                     <div class="relative overflow-hidden w-full h-80">
                         <img class="w-full h-80 object-cover rounded-md transform transition-transform duration-500 hover:scale-110"
                             src="{{ asset('image/product1.jpg') }}" alt="produk 1">
@@ -34,7 +34,7 @@
                     <h3 class="font-poppins font-semibold text-2xl mt-2">Baju Pria</h3>
                     <h4 class="text-red-600 font-poppins font-semibold text-md">Rp 1.000.000</h4>
                 </div>
-                <div class="kategoriItem flex-shrink-0 snap-center w-80 h-100 p-4 mr-4 text-center overflow-hidden">
+                <div class="kategoriItem flex-shrink-0 snap-center w-[340px] h-100 p-4 mr-4 text-center overflow-hidden">
                     <div class="relative overflow-hidden w-full h-80">
                         <img class="w-full h-80 object-cover rounded-md transform transition-transform duration-500 hover:scale-110"
                             src="{{ asset('image/product1.jpg') }}" alt="produk 1">
@@ -42,7 +42,7 @@
                     <h3 class="font-poppins font-semibold text-2xl mt-2">Baju Pria</h3>
                     <h4 class="text-red-600 font-poppins font-semibold text-md">Rp 1.000.000</h4>
                 </div>
-                <div class="kategoriItem flex-shrink-0 snap-center w-80 h-100 p-4 mr-4 text-center overflow-hidden">
+                <div class="kategoriItem flex-shrink-0 snap-center w-[340px] h-100 p-4 mr-4 text-center overflow-hidden">
                     <div class="relative overflow-hidden w-full h-80">
                         <img class="w-full h-80 object-cover rounded-md transform transition-transform duration-500 hover:scale-110"
                             src="{{ asset('image/product1.jpg') }}" alt="produk 1">

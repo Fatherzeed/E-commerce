@@ -1,5 +1,5 @@
     <nav class="bg-white shadow-lg w-full sticky top-0 z-20">
-        <div class="nav-container flex lg:max-w-6xl w-[80%] h-14 mx-auto">
+        <div class="nav-container wrapper80 flex lg:max-w-6xl h-14 mx-auto">
             <div class="content grid grid-cols-5 px-4 w-full">
                 <div class="flex flex-shrink-0 items-center ">
                     <a class="flex flex-shrink-0 items-center hover:scale-110 duration-300 hover:skew-x-10 ease-in-out"

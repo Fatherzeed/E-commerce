@@ -1,15 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const imageContainer = document.getElementById("imageContainer");
-    const registerButton = document.getElementById("registerButton");
-    const loginButton = document.getElementById("loginButton");
+$(document).ready(function () {
+    const $imageContainer = $("#imageContainer");
+    const $registerButton = $("#registerButton");
+    const $loginButton = $("#loginButton");
 
-    registerButton.addEventListener("click", function () {
-        imageContainer.classList.add("shift-left");
-        imageContainer.classList.remove("shift-right");
+    $registerButton.click(function () {
+        $imageContainer.addClass("shift-left").removeClass("shift-right");
     });
 
-    loginButton.addEventListener("click", function () {
-        imageContainer.classList.add("shift-right");
-        imageContainer.classList.remove("shift-left");
+    $loginButton.click(function () {
+        $imageContainer.addClass("shift-right").removeClass("shift-left");
     });
 });

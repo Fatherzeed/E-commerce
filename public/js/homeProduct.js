@@ -1,10 +1,10 @@
 $(document).ready(function () {
     $("#arrow-left").click(function () {
-        $("#kategoriContainer").animate({ scrollLeft: "-=300px" }, 150);
+        $("#kategoriContainer").animate({ scrollLeft: "-=360px" }, 150);
     });
 
     $("#arrow-right").click(function () {
-        $("#kategoriContainer").animate({ scrollLeft: "+=300px" }, 150);
+        $("#kategoriContainer").animate({ scrollLeft: "+=360px" }, 150);
     });
 });
 
