@@ -10,7 +10,7 @@
                 </div>
                 <div class="hidden col-span-3 w-full md:flex justify-center  items-center gap-x-10 ">
                     <form
-                        class="group form-inline flex w-full items-center hover:scale-110 duration-300 hover:skew-x-10 ease-in-out"
+                        class="group form-inline flex w-full items-center hover:scale-105 duration-300 hover:skew-x-10 ease-in-out"
                         action="" method="GET">
                         <input
                             class="h-10  form-input flex-grow px-4 py-2 rounded-l-xl border-2 border-r-0 text-sm font-poppins group-hover:border-blue-700  active:border-blue-700 focus:outline-none"

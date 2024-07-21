@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
     @apply font-poppins;
 }
 
@@ -82,7 +85,7 @@ h1,h2,h3,h4 {
 
 .arrow-left,
 .arrow-right {
-@apply lg:opacity-0 opacity-100 top-[50%];
+    @apply lg:opacity-0 opacity-100 top-[50%];
 }
 
 .arrowleftEnter {
@@ -123,8 +126,8 @@ h1,h2,h3,h4 {
     .hideRegister {
         @apply duration-300 ease-in-out;
     }
-    
+
     .hideLogin {
-        @apply ;
+        @apply;
     }
 }
