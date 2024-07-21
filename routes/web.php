@@ -23,6 +23,11 @@ Route::get('/testhome', function() {
 //Home
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+Route::get('/categories', function() {
+    return view('home.categories');
+});
+
+
 //Login
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/ceklogin', [LoginController::class, 'login'])->name('ceklogin');
