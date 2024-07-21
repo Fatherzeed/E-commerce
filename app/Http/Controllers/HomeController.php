@@ -10,17 +10,15 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // $sessionLogin = session('loggedInUser');
-        // $sessionLogin['username'] ?? exit(header("Location: " . route('login')));
-        // $username = $sessionLogin['username'];
-        // $accessToken = Session::get('access_token');
-        // $refreshToken = Session::get('refresh_token');
-        // $name = Session::get('loggedInUser') ?? exit(header("Location: " . route('login')));
+
+        $username = Session::get('username');
+        $uuid = Session::get('uuid');
 
         
 
         // return view('home/indexhome', compact('accessToken', 'refreshToken', 'name'));
-        return view('home/indexhome');
+        return view('home/indexhome', compact('username', 'uuid'));
+        // return view('home/indexhome');
     }
 
 }

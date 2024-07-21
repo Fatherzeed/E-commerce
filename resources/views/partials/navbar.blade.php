@@ -26,9 +26,9 @@
                     </button>
                 </form>
                 <a class="garisbawah font-poppins hover:scale-110 duration-300 hover:skew-x-10 ease-in-out"
-                    href="">Home</a>
+                    href="#">Home</a>
                 <a class="garisbawah font-poppins hover:scale-110 duration-300 hover:skew-x-10 ease-in-out"
-                    href="">Categories</a>
+                    href="#">Categories</a>
             </div>
             <div class="hidden md:flex w-full lg:justify-start md:justify-center items-center gap-x-5 pl-36">
                 <button id="openCartBtn" class="group hover:scale-110 duration-300 hover:skew-x-10 ease-in-out"><svg

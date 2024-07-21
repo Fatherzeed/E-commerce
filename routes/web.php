@@ -25,7 +25,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //Login
 Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/ceklogin', [LoginController::class, 'login'])->name('ceklogin');
+Route::get('/ceklogin', [LoginController::class, 'login'])->name('ceklogin');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 

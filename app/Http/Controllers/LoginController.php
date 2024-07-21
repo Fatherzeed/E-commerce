@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Response;
 
 class LoginController extends Controller
 {
@@ -27,24 +28,37 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $email = $request->input('email');
+        $username = $request->input('username');
         $password = $request->input('password');
-
-        
-
-
-        
-
-
+    
+        $user = DB::table('tbl_user')
+            ->where('username', $username)
+            ->where('password', $password)
+            ->first();
+    
+        if ($user) {
+            Session::put('uuid', $user->uuid);
+            Session::put('username', $user->username);
+    
+            return Response::json([
+                'status' => 'success',
+                'message' => 'Login berhasil',
+                'redirect_url' => route('home')
+            ]);
+        } else {
+            return Response::json([
+                'status' => 'error',
+                'message' => 'Username atau password salah'
+            ], 401);
+        }
     }
 
     public function logout()
     {
-        if (session()->has('loggedInUser')) {
-            session()->pull('loggedInUser');
-            Auth::logout();
-            return redirect('/');
-        }
+        Session::forget('uuid');
+        Session::forget('username');
+        Auth::logout();
+        return redirect('/')->with('success', 'Anda telah berhasil logout.');
     }
 
 
