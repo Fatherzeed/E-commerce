@@ -8,16 +8,6 @@
     {{-- <h1>Welcome, {{ $username }}</h1>
     <p>Your UUID: {{ $uuid }}</p> --}}
 
-    <!-- Jika pengguna sudah login -->
-    @auth
-        <p>Welcome, {{ Auth::user()->username }}!</p>
-    @endauth
-
-    <!-- Jika pengguna belum login -->
-    @guest
-        <p>Please log in to continue.</p>
-    @endguest
-
 
     <section class="hero flex h-[70dvh] bg-blue-600 items-center grow-0 shrink-0 w-full mx-auto">
         <div class="wrapper80 md:mx-auto">
