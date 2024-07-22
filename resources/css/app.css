@@ -17,6 +17,12 @@ input {
     @apply flex relative h-full items-center after:absolute after:bottom-4 after:left-0 after:h-1 after:bg-blue-600 after:right-0 after:rounded-lg after:hover:w-full after:w-0 after:duration-300 after:ease-in-out;
 }
 
+/* Drop Down */
+
+.dropdownContent {
+    @apply bg-white hover:bg-blue-100 text-center font-poppins text-[14px] font-medium;
+}
+
 /* Cart Sidebar */
 
 #cartbar {
