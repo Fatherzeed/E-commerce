@@ -16,7 +16,7 @@
                 @csrf --}}
                 <div class="mb-4">
                     <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
-                    <input type="text" name="username" id="username" placeholder="username"
+                    <input type="text" name="username" id="username"  placeholder="username"
                         class="italic mt-1 block w-full p-2 border rounded-md text-sm">
                 </div>
                 <div class="mb-4">
@@ -63,7 +63,8 @@
                         <input type="password" name="password_confirmation" id="password_confirmation"
                             placeholder="Confirm Password" class="mt-1 block w-full p-2 border rounded-md italic text-sm">
                     </div>
-                    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md font-poppins">Sign Up</button>
+                    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md font-poppins">Sign
+                        Up</button>
                 </form>
 
                 <p class="mt-3 text-center text-sm font-poppins">already have an account? <button id="loginButton"
@@ -76,5 +77,71 @@
 @endsection
 
 @section('script')
-   
+<script>
+    $(document).ready(function() {
+        $("#btnLogin").click(function(event) {
+            event.preventDefault(); // Mencegah form dari pengiriman otomatis
+
+            var email = $("#username").val().trim(); // Menghilangkan spasi di awal dan akhir
+            var password = $("#password").val().trim(); // Menghilangkan spasi di awal dan akhir
+
+            if (!email) {
+                showMessage("error", "Masukkan Username");
+                return; // Keluar dari fungsi jika username tidak dimasukkan
+            } else if (!password) {
+                showMessage("error", "Masukkan Password");
+                return; // Keluar dari fungsi jika password tidak dimasukkan
+            }
+
+            // Periksa jika username mengandung spasi
+            if (/\s/.test(email)) {
+                showMessage("error", "Username tidak boleh mengandung spasi");
+                return;
+            }
+
+            if (!navigator.onLine) {
+                showMessage("error", "Koneksi Internet Error");
+                return; // Keluar dari fungsi jika tidak ada koneksi internet
+            }
+
+            Swal.fire({
+                title: "Checking...",
+                text: "Please wait while we check data.",
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                },
+            });
+
+            $.ajax({
+                type: "GET",
+                url: "{{ route('ceklogin') }}",
+                data: {
+                    username: email,
+                    password: password,
+                },
+                success: function(response) {
+                    Swal.close();
+                    if (response.status === "success") {
+                        window.location.href = response.redirect_url;
+                    } else {
+                        showMessage("error", response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    Swal.close();
+                    if (xhr.status === 401) {
+                        showMessage("error", "User Tidak Ditemukan");
+                    } else {
+                        showMessage(
+                            "error",
+                            "Terjadi kesalahan. Silakan coba lagi."
+                        );
+                    }
+                },
+            });
+        });
+    });
+</script>
+
 @endsection
