@@ -5,15 +5,18 @@ $(document).ready(function () {
     $("#profileContainer").click(function (event) {
         event.stopPropagation(); // Prevent the click from bubbling up to the document
         $("#dropdownContainer").toggle();
+        $("#arrowDown").toggleClass("rotate-90");
     });
 
     // Hide dropdown when clicking outside of it
     $(document).click(function (event) {
         if (!$(event.target).closest("#profileContainer, #dropdownContainer").length) {
             $("#dropdownContainer").hide();
+            $("#arrowDown").removeClass("rotate-90");
         }
     });
 });
+
 
 
 

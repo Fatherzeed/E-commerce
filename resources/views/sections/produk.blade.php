@@ -1,4 +1,4 @@
-<section class="produk-section h-[160dvh] w-full bg-gray-100 grow-0 shrink-0">
+<section class="produk-section h-[120dvh] w-full bg-gray-100 grow-0 shrink-0">
     <div id="collectionContainer" class="wrapper80 flex flex-col grow-0 shrink-0 px-10 py-5 h-1/2 mx-auto gap-y-4">
         <h1 class="textJudul w-full text-center">Collection</h1>
         <div class="relative px-5">
@@ -16,7 +16,6 @@
                             src="{{ asset('image/product1.jpg') }}" alt="produk 1">
                     </div>
                     <h3 class="font-poppins font-semibold text-2xl mt-2">Baju Pria</h3>
-                    <h4 class="text-red-600 font-poppins font-semibold text-md">Rp 1.000.000</h4>
                 </div>
                 <div class="kategoriItem flex-shrink-0 snap-center w-[340px] h-100 p-4 mr-4 text-center overflow-hidden">
                     <div class="relative overflow-hidden w-full h-80">
@@ -24,7 +23,6 @@
                             src="{{ asset('image/product1.jpg') }}" alt="produk 1">
                     </div>
                     <h3 class="font-poppins font-semibold text-2xl mt-2">Baju Pria</h3>
-                    <h4 class="text-red-600 font-poppins font-semibold text-md">Rp 1.000.000</h4>
                 </div>
                 <div class="kategoriItem flex-shrink-0 snap-center w-[340px] h-100 p-4 mr-4 text-center overflow-hidden">
                     <div class="relative overflow-hidden w-full h-80">
@@ -32,7 +30,6 @@
                             src="{{ asset('image/product1.jpg') }}" alt="produk 1">
                     </div>
                     <h3 class="font-poppins font-semibold text-2xl mt-2">Baju Pria</h3>
-                    <h4 class="text-red-600 font-poppins font-semibold text-md">Rp 1.000.000</h4>
                 </div>
                 <div class="kategoriItem flex-shrink-0 snap-center w-[340px] h-100 p-4 mr-4 text-center overflow-hidden">
                     <div class="relative overflow-hidden w-full h-80">
@@ -40,7 +37,6 @@
                             src="{{ asset('image/product1.jpg') }}" alt="produk 1">
                     </div>
                     <h3 class="font-poppins font-semibold text-2xl mt-2">Baju Pria</h3>
-                    <h4 class="text-red-600 font-poppins font-semibold text-md">Rp 1.000.000</h4>
                 </div>
                 <div class="kategoriItem flex-shrink-0 snap-center w-[340px] h-100 p-4 mr-4 text-center overflow-hidden">
                     <div class="relative overflow-hidden w-full h-80">
@@ -48,7 +44,6 @@
                             src="{{ asset('image/product1.jpg') }}" alt="produk 1">
                     </div>
                     <h3 class="font-poppins font-semibold text-2xl mt-2">Baju Pria</h3>
-                    <h4 class="text-red-600 font-poppins font-semibold text-md">Rp 1.000.000</h4>
                 </div>
 
                 <!-- Tambahkan lebih banyak kategoriItem sesuai kebutuhan -->

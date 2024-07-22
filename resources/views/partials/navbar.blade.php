@@ -4,9 +4,9 @@
             <!-- Logo and Brand Name -->
             <div class="flex items-center">
                 <a href="{{ route('home') }}"
-                    class="flex items-center hover:scale-110 duration-300 hover:skew-x-10 ease-in-out">
+                    class="flex items-center hover:scale-105 duration-300 hover:skew-x-10 ease-in-out">
                     <span
-                        class="hidden lg:block text-black text-3xl font-bold ml-2 after:content-['op'] after:text-blue-600">Sh</span>
+                        class="hidden lg:block text-black text-4xl font-bold ml-2 after:content-['op'] after:text-blue-600">Sh</span>
                 </a>
             </div>
 
@@ -17,18 +17,18 @@
                     <input type="search" placeholder="Search Here..." aria-label="Search"
                         class="h-10 flex-grow px-4 py-2 rounded-l-xl border-2 border-r-0 text-sm font-poppins group-hover:border-blue-700 focus:outline-none" />
                     <button type="submit"
-                        class="h-10 px-4 py-2 border-2 border-l-0 rounded-r-xl group-hover:border-blue-700 -ml-px">
+                        class="group h-10 px-4 py-2 border-2 border-l-0 rounded-r-xl group-hover:border-blue-700 -ml-px group-hover:bg-blue-600">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="text-gray-300 group-hover:text-blue-700">
+                            stroke="currentColor" class="w-5 text-gray-300 group-hover:text-white">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                         </svg>
                     </button>
                 </form>
                 <a href="{{ route('home') }}"
-                    class="h-full hidden lg:flex items-center border-b-[4px] border-transparent hover:border-blue-600 font-poppins duration-300 hover:skew-x-10 ease-in-out">Home</a>
+                    class="h-full hidden lg:flex items-center border-b-[4px] border-transparent hover:text-blue-600 hover:scale-105 hover:border-blue-600 font-poppins duration-300 hover:skew-x-10 ease-in-out">Home</a>
                 <a href="#"
-                    class="h-full flex items-center font-poppins border-b-[4px] border-transparent hover:border-blue-600 duration-300 hover:skew-x-10 ease-in-out">Categories</a>
+                    class="h-full flex items-center font-poppins border-b-[4px] border-transparent hover:text-blue-600 hover:scale-105 hover:border-blue-600 duration-300 hover:skew-x-10 ease-in-out">Categories</a>
             </div>
 
             <!-- User Info and Cart Button -->
@@ -51,8 +51,8 @@
                     <h4 class="pl-1 font-poppins group-hover:text-blue-600 duration-300 ease-in-out select-none">
                         {{ $username ?? '' }}
                     </h4>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-3 group-hover:text-blue-600 duration-300 ease-in-out">
+                    <svg id="arrowDown" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-3 group-hover:text-blue-600 duration-300 ease-in-out ml-1">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                     </svg>
                     <div class="absolute hidden top-[100%] left-[-5%] w-32 h-auto" id="dropdownContainer">

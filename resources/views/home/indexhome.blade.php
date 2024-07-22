@@ -25,9 +25,6 @@
 
     @include('sections.produk')
 
-    <section class="h-[80dvh] bg-green-500">
-
-    </section>
     @include('partials.footer')
 @endsection
 
