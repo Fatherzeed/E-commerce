@@ -16,7 +16,7 @@
                 @csrf --}}
                 <div class="mb-4">
                     <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
-                    <input type="text" name="username" id="username"  placeholder="username"
+                    <input type="text" name="username" id="username" placeholder="username"
                         class="italic mt-1 block w-full p-2 border rounded-md text-sm">
                 </div>
                 <div class="mb-4">
@@ -40,15 +40,15 @@
             {{-- register --}}
             <div class="w-1/2 p-8 bg-[#eee]">
                 <h2 class="text-6xl font-bold mb-6 text-center ">Sh<span class="text-sky-600">op</span></h2>
-                <form action="" method="POST">
-                    @csrf
+                {{-- <form action="" method="POST">
+                    @csrf --}}
                     <div class="mb-4">
-                        <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+                        <label for="username" class="block text-sm font-medium text-gray-700" >Username</label>
                         <input type="text" name="username" id="username" placeholder="Username"
-                            class="mt-1 block w-full p-2 border rounded-md italic text-sm">
+                            class="mt-1 block w-full p-2 border rounded-md italic text-sm" required>
                     </div>
                     <div class="mb-4">
-                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <label for="email" class="block text-sm font-medium text-gray-700" >Email</label>
                         <input type="email" name="email" id="email" placeholder="Email"
                             class="mt-1 block w-full p-2 border rounded-md italic text-sm">
                     </div>
@@ -56,16 +56,18 @@
                         <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                         <input type="password" name="password" id="password" placeholder="Password"
                             class="mt-1 block w-full p-2 border rounded-md italic text-sm">
+                            <div class="err"></div>
                     </div>
                     <div class="mb-4">
                         <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirm
                             Password</label>
                         <input type="password" name="password_confirmation" id="password_confirmation"
                             placeholder="Confirm Password" class="mt-1 block w-full p-2 border rounded-md italic text-sm">
+
                     </div>
-                    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md font-poppins">Sign
+                    <button id="btnregist" class="w-full bg-blue-500 text-white p-2 rounded-md font-poppins">Sign
                         Up</button>
-                </form>
+                {{-- </form> --}}
 
                 <p class="mt-3 text-center text-sm font-poppins">already have an account? <button id="loginButton"
                         class="font-bold text-blue-500 font-poppins">Sign In!</button></p>
@@ -77,71 +79,100 @@
 @endsection
 
 @section('script')
-<script>
-    $(document).ready(function() {
-        $("#btnLogin").click(function(event) {
-            event.preventDefault(); // Mencegah form dari pengiriman otomatis
+    <script>
+        $(document).ready(function() {
+            $("#btnLogin").click(function(event) {
+                event.preventDefault();
 
-            var email = $("#username").val().trim(); // Menghilangkan spasi di awal dan akhir
-            var password = $("#password").val().trim(); // Menghilangkan spasi di awal dan akhir
+                var email = $("#username").val().trim();
+                var password = $("#password").val().trim();
+                if (!email) {
+                    showMessage("error", "Masukkan Username");
+                    return;
+                } else if (!password) {
+                    showMessage("error", "Masukkan Password");
+                    return;
+                }
 
-            if (!email) {
-                showMessage("error", "Masukkan Username");
-                return; // Keluar dari fungsi jika username tidak dimasukkan
-            } else if (!password) {
-                showMessage("error", "Masukkan Password");
-                return; // Keluar dari fungsi jika password tidak dimasukkan
-            }
 
-            // Periksa jika username mengandung spasi
-            if (/\s/.test(email)) {
-                showMessage("error", "Username tidak boleh mengandung spasi");
-                return;
-            }
+                if (/\s/.test(email)) {
+                    showMessage("error", "Username tidak boleh mengandung spasi");
+                    return;
+                }
 
-            if (!navigator.onLine) {
-                showMessage("error", "Koneksi Internet Error");
-                return; // Keluar dari fungsi jika tidak ada koneksi internet
-            }
+                if (!navigator.onLine) {
+                    showMessage("error", "Koneksi Internet Error");
+                    return;
+                }
 
-            Swal.fire({
-                title: "Checking...",
-                text: "Please wait while we check data.",
-                allowOutsideClick: false,
-                didOpen: () => {
-                    Swal.showLoading();
-                },
-            });
+                Swal.fire({
+                    title: "Checking...",
+                    text: "Please wait while we check data.",
+                    allowOutsideClick: false,
+                    didOpen: () => {
+                        Swal.showLoading();
+                    },
+                });
 
-            $.ajax({
-                type: "GET",
-                url: "{{ route('ceklogin') }}",
-                data: {
-                    username: email,
-                    password: password,
-                },
-                success: function(response) {
-                    Swal.close();
-                    if (response.status === "success") {
-                        window.location.href = response.redirect_url;
-                    } else {
-                        showMessage("error", response.message);
-                    }
-                },
-                error: function(xhr, status, error) {
-                    Swal.close();
-                    if (xhr.status === 401) {
-                        showMessage("error", "User Tidak Ditemukan");
-                    } else {
-                        showMessage(
-                            "error",
-                            "Terjadi kesalahan. Silakan coba lagi."
-                        );
-                    }
-                },
+                $.ajax({
+                    type: "GET",
+                    url: "{{ route('ceklogin') }}",
+                    data: {
+                        username: email,
+                        password: password,
+                    },
+                    success: function(response) {
+                        Swal.close();
+                        if (response.status === "success") {
+                            window.location.href = response.redirect_url;
+                        } else {
+                            showMessage("error", response.message);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        Swal.close();
+                        if (xhr.status === 401) {
+                            showMessage("error", "User Tidak Ditemukan");
+                        } else {
+                            showMessage(
+                                "error",
+                                "Terjadi kesalahan. Silakan coba lagi."
+                            );
+                        }
+                    },
+                });
             });
         });
-    });
-</script>
+    </script>
 
+    <script>
+        $(document).ready(function() {
+            $("#btnregist").click(function(event) {
+                event.preventDefault();
+                // let username = 'fikri';
+                // let email = 'fikri@gmail.com';
+                // let password = '12345';
+
+                //csrftoken jgn di hapus ya 3 variabel atas aja ganti
+                let csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+
+                $.ajax({
+                    type: "POST",
+                    headers: {
+                        'X-CSRF-TOKEN': csrfToken
+                    },
+                    url: "{{ route('registrasi') }}",
+                    data: {
+                        username: username,
+                        password: password,
+                        email: email
+                    },
+                    success: function(response) {
+                        console.log(response);
+                    }
+                });
+            })
+        })
+    </script>
 @endsection
