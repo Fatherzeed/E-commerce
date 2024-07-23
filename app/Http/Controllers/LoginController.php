@@ -34,26 +34,24 @@ class LoginController extends Controller
 
         $user = DB::table('tbl_user')
             ->where('username', $username)
-            ->where('password', $password)
             ->first();
 
-        if ($user) {
+        if ($user && Hash::check($password, $user->password)) {
             Session::put('uuid', $user->uuid);
             Session::put('username', $user->username);
 
-            return Response::json([
+            return response()->json([
                 'status' => 'success',
                 'message' => 'Login berhasil',
                 'redirect_url' => route('home')
             ]);
         } else {
-            return Response::json([
+            return response()->json([
                 'status' => 'error',
                 'message' => 'Username atau password salah'
             ], 401);
         }
     }
-
     public function logout()
     {
         Session::forget('uuid');
