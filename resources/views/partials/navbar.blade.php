@@ -6,12 +6,12 @@
                 <a href="{{ route('home') }}"
                     class="flex items-center hover:scale-105 duration-300 hover:skew-x-10 ease-in-out">
                     <span
-                        class="hidden lg:block text-black text-4xl font-bold ml-2 after:content-['op'] after:text-blue-600">Sh</span>
+                        class="block text-black text-4xl font-bold lg:ml-2 after:content-['op'] after:text-blue-600">Sh</span>
                 </a>
             </div>
 
             <!-- Search Bar and Navigation Links -->
-            <div class="hidden md:flex col-span-3 items-center justify-center gap-x-10 w-full">
+            <div class="hidden md:flex col-span-3 items-center justify-center lg:gap-x-10 gap-x-5 w-full">
                 <form action="" method="GET"
                     class="group flex w-full items-center hover:scale-105 duration-300 hover:skew-x-10 ease-in-out">
                     <input type="search" placeholder="Search Here..." aria-label="Search"
@@ -55,7 +55,7 @@
                         stroke="currentColor" class="w-3 group-hover:text-blue-600 duration-300 ease-in-out ml-1">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                     </svg>
-                    <div class="absolute hidden top-[100%] left-[-5%] w-32 h-auto" id="dropdownContainer">
+                    <div class="absolute hidden top-[100%] lg:left-[-5%] left-[-20%] w-32 h-auto" id="dropdownContainer">
                         <ul class="flex flex-col items-center shadow-lg border-t-4 border-blue-600 bg-blue-600 rounded-b-lg">
                             <a class="dropdownContent w-full p-2 " href="{{route('login')}}">
                                 <li>Login</li>

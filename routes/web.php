@@ -26,6 +26,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/categories', function() {
     return view('home.categories');
 });
+Route::get('/detail', function() {
+    return view('produk.detailproduk');
+});
 
 
 //Login

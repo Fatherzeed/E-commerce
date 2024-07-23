@@ -64,7 +64,7 @@ input {
 /* Scafolding */
 
 .wrapper80 {
-    @apply md:w-[80%] w-full;
+    @apply lg:w-[80%] w-full;
 }
 
 .textJudul {
