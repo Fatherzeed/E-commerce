@@ -62,9 +62,9 @@ class LoginController extends Controller
 
     public function registrasi(Request $request)
     {
-        $usernameRegist = $request->input('username');
-        $passwordRegist = $request->input('password');
-        $emailRegist = $request->input('email');
+        $usernameRegist = $request->input('regUsername');
+        $passwordRegist = $request->input('regPassword');
+        $emailRegist = $request->input('regEmail');
 
         $hashedPassword = Hash::make($passwordRegist);
 

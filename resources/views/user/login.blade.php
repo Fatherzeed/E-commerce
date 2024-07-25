@@ -44,24 +44,24 @@
                     @csrf --}}
                     <div class="mb-4">
                         <label for="username" class="block text-sm font-medium text-gray-700" >Username</label>
-                        <input type="text" name="username" id="username" placeholder="Username"
+                        <input type="text" name="regUsername" id="regUsername" placeholder="Username"
                             class="mt-1 block w-full p-2 border rounded-md italic text-sm" required>
                     </div>
                     <div class="mb-4">
                         <label for="email" class="block text-sm font-medium text-gray-700" >Email</label>
-                        <input type="email" name="email" id="email" placeholder="Email"
+                        <input type="email" name="regEmail" id="regEmail" placeholder="Email"
                             class="mt-1 block w-full p-2 border rounded-md italic text-sm">
                     </div>
                     <div class="mb-4">
                         <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Password"
+                        <input type="password" name="regPassword" id="regPassword" placeholder="Password"
                             class="mt-1 block w-full p-2 border rounded-md italic text-sm">
                             <div class="err"></div>
                     </div>
                     <div class="mb-4">
                         <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirm
                             Password</label>
-                        <input type="password" name="password_confirmation" id="password_confirmation"
+                        <input type="password" name="regPassword_confirmation" id="regPassword_confirmation"
                             placeholder="Confirm Password" class="mt-1 block w-full p-2 border rounded-md italic text-sm">
 
                     </div>
@@ -164,9 +164,9 @@
                     },
                     url: "{{ route('registrasi') }}",
                     data: {
-                        username: username,
-                        password: password,
-                        email: email
+                        username: regUsername,
+                        password: regPassword,
+                        email: regEmail
                     },
                     success: function(response) {
                         console.log(response);
