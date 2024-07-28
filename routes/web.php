@@ -33,7 +33,6 @@ Route::get('/detail', function() {
 
 //Login
 Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/registrasi', [LoginController::class, 'index'])->name('registrasi');
 Route::get('/ceklogin', [LoginController::class, 'login'])->name('ceklogin');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::post('/login/registrasi', [LoginController::class, 'registrasi'])->name('registrasi');

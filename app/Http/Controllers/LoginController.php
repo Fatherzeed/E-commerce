@@ -65,12 +65,22 @@ class LoginController extends Controller
         $usernameRegist = $request->input('regUsername');
         $passwordRegist = $request->input('regPassword');
         $emailRegist = $request->input('regEmail');
-
+    
+        $existingUser = DB::table('tbl_user')->where('username', $usernameRegist)->first();
+        if ($existingUser) {
+            return response()->json(['error' => 'Username already exists'], 409);
+        }
+    
+        $existingEmail = DB::table('tbl_user')->where('email', $emailRegist)->first();
+        if ($existingEmail) {
+            return response()->json(['error' => 'Email already exists'], 409);
+        }
+    
         $hashedPassword = Hash::make($passwordRegist);
-
+    
         $lastUuid = DB::table('tbl_user')->orderBy('uuid', 'desc')->value('uuid');
         $newUuid = str_pad((int)$lastUuid + 1, 4, '0', STR_PAD_LEFT);
-
+    
         try {
             DB::table('tbl_user')->insert([
                 'username' => $usernameRegist,
@@ -79,13 +89,13 @@ class LoginController extends Controller
                 'email' => $emailRegist,
                 'role_id' => 2
             ]);
-
+    
             return response()->json(['message' => 'User registered successfully!'], 201);
         } catch (\Exception $e) {
             return response()->json(['error' => 'Failed to register user: ' . $e->getMessage()], 500);
         }
-
     }
+    
 
 
 }
