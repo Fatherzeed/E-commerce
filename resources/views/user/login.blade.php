@@ -22,14 +22,14 @@
                     <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
 
                     <input type="text" name="username" id="username" placeholder="username"
-                        class="italic mt-1 block w-full p-2 border rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-sky-600">
+                        class="mt-1 block w-full p-2 border rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-sky-600">
                     <p id="error-message" class="text-xs font-poppins mt-1 text-red-500"></p>
                 </div>
                 <div class="mb-4">
                     <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
 
                     <input type="password" name="password" id="password" placeholder="password"
-                        class="italic mt-1 block w-full p-2 border rounded-md text-sm  focus:outline-none focus:ring-1 focus:ring-sky-600">
+                        class="mt-1 block w-full p-2 border rounded-md text-sm  focus:outline-none focus:ring-1 focus:ring-sky-600">
                     <p id="error-message-ps" class="text-xs font-poppins mt-1 text-red-500"></p>
                 </div>
                 <div class="mb-4 flex justify-between items-center">
@@ -54,18 +54,18 @@
                 <div class="mb-4">
                     <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
                     <input type="text" name="regUsername" id="regUsername" placeholder="Username"
-                        class="mt-1 block w-full p-2 border rounded-md italic text-sm  focus:outline-none focus:ring-1 focus:ring-sky-600"
+                        class="mt-1 block w-full p-2 border rounded-md text-sm  focus:outline-none focus:ring-1 focus:ring-sky-600"
                         required>
                 </div>
                 <div class="mb-4">
                     <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                     <input type="email" name="regEmail" id="regEmail" placeholder="Email"
-                        class="mt-1 block w-full p-2 border rounded-md italic text-sm  focus:outline-none focus:ring-1 focus:ring-sky-600">
+                        class="mt-1 block w-full p-2 border rounded-md text-sm  focus:outline-none focus:ring-1 focus:ring-sky-600">
                 </div>
                 <div class="mb-4">
                     <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                     <input type="password" name="regPassword" id="regPassword" placeholder="Password"
-                        class="mt-1 block w-full p-2 border rounded-md italic text-sm  focus:outline-none focus:ring-1 focus:ring-sky-600">
+                        class="mt-1 block w-full p-2 border rounded-md text-sm  focus:outline-none focus:ring-1 focus:ring-sky-600">
                     <div class="err"></div>
                 </div>
                 <div class="mb-4">
@@ -73,7 +73,7 @@
                         Password</label>
                     <input type="password" name="regPassword_confirmation" id="regPassword_confirmation"
                         placeholder="Confirm Password"
-                        class="mt-1 block w-full p-2 border rounded-md italic text-sm  focus:outline-none focus:ring-1 focus:ring-sky-600">
+                        class="mt-1 block w-full p-2 border rounded-md text-sm  focus:outline-none focus:ring-1 focus:ring-sky-600">
 
                 </div>
                 <button id="btnregist" class="w-full bg-blue-500 text-white p-2 rounded-md font-poppins">Sign

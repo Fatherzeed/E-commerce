@@ -16,8 +16,8 @@ use App\Http\Controllers\LoginController;
 */
 
 // Testing Route
-Route::get('/testhome', function() {
-    return view('home.testhome');
+Route::get('/profile', function() {
+    return view('profile.profil');
 });
 
 //Home
