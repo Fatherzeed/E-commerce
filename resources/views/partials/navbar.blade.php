@@ -60,7 +60,7 @@
                             <a class="dropdownContent w-full p-2 " href="{{route('login')}}">
                                 <li>Login</li>
                             </a>
-                            <a class="dropdownContent w-full p-2 " href="#">
+                            <a class="dropdownContent w-full p-2 " href="{{route('profile')}}">
                                 <li>My Profile</li>
                             </a>
                             <a class="dropdownContent w-full p-2 " href="#">

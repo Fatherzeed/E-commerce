@@ -35,17 +35,17 @@
             </div>
             <div class="absolute inset-0 flex items-center justify-between">
                 <button
-                    class="!absolute top-2/4 xl:start-[10%] lg:start-[-5%] start-5 -translate-y-2/4 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] bg-gray-100 text-blue-400 hover:text-white hover:bg-blue-600 active:bg-white/30 grid place-items-center" id="hero-left-arrow"><svg
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        stroke-width="3" class="-ml-1 h-7 w-7">
+                    class="!absolute top-2/4 xl:start-[10%] lg:start-[-5%] start-5 -translate-y-2/4 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] bg-gray-100 text-blue-400 hover:text-white hover:bg-blue-600 active:bg-white/30 grid place-items-center"
+                    id="hero-left-arrow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="3" class="-ml-1 h-7 w-7">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
                     </svg></button>
                 <button
-                    class="!absolute top-2/4 xl:end-[10%] lg:end-[-5%] end-5 -translate-y-2/4 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] bg-gray-100 text-blue-400 hover:text-white hover:bg-blue-600 active:bg-white/30 grid place-items-center" id="hero-right-arrow"><svg
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        stroke-width="3" class="ml-1 h-7 w-7">
+                    class="!absolute top-2/4 xl:end-[10%] lg:end-[-5%] end-5 -translate-y-2/4 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-12 max-w-[48px] h-12 max-h-[48px] bg-gray-100 text-blue-400 hover:text-white hover:bg-blue-600 active:bg-white/30 grid place-items-center"
+                    id="hero-right-arrow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="3" class="ml-1 h-7 w-7">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
-                    </svg></button>
+                        </></button>
             </div>
 
         </div>

@@ -1,4 +1,4 @@
-<aside class="absolute left-[-10em]">
+<aside class="absolute left-[-11em]">
     <div class="w-40">
         <div class="pl-5 py-5 border-r-[4px] border-gray-300">
             <ul class="flex flex-col gap-y-2">
