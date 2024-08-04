@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,8 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-// Testing Route
-Route::get('/profile', function() {
-    return view('profile.profil');
-});
+
+
 
 //Home
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -29,6 +28,10 @@ Route::get('/categories', function() {
 Route::get('/detail', function() {
     return view('produk.detailproduk');
 });
+
+// test Update Profile
+Route::match(['GET', 'POST'],'/update-profile', [ProfileController::class, 'updateProfile'])->name('update-profile');
+Route::match(['GET', 'POST'],'/profile', [ProfileController::class, 'profileView'])->name('profile');
 
 
 //Login
