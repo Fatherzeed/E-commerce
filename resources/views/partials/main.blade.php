@@ -20,7 +20,7 @@
     <title>@yield('title')</title>
 </head>
 
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden w-full">
     <div class="overlay duration-300 ease-in-out"></div>
     @yield('content')
 

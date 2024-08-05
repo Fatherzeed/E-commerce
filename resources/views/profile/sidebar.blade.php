@@ -1,6 +1,6 @@
-<aside class="absolute left-[-11em]">
-    <div class="w-40">
-        <div class="pl-5 py-5 border-r-[4px] border-gray-300">
+<aside class="hidden lg:block">
+    <div class="w-48">
+        <div class="px-5 py-5 border-r-[4px] border-gray-300">
             <ul class="flex flex-col gap-y-2">
                 <div class="flex">
                     <i><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -13,10 +13,10 @@
                 </div>
                 <div class="flex flex-col gap-y-2 ml-2 text-lg">
                     <a href="">
-                        <li>Edit Profil</li>
+                        <li class="garisbawah">Edit Profil</li>
                     </a>
                     <a href="">
-                        <li>Edit Address</li>
+                        <li class="garisbawah">Edit Address</li>
                     </a>
                 </div>
 
@@ -33,10 +33,10 @@
                 </div>
                 <div class="flex flex-col gap-y-2 ml-2 text-lg">
                     <a href="">
-                        <li>Cart</li>
+                        <li class="garisbawah">Cart </li>
                     </a>
                     <a href="">
-                        <li>Order</li>
+                        <li class="garisbawah">Pembayaran</li>
                     </a>
                 </div>
 

@@ -1,5 +1,5 @@
 <nav class="bg-white shadow-lg w-full sticky top-0 z-20">
-    <div class="nav-container wrapper80 flex lg:max-w-6xl h-14 mx-auto">
+    <div class="nav-container wrapper90 flex lg:max-w-6xl h-14 mx-auto">
         <div class="content grid grid-cols-5 px-4 w-full">
             <!-- Logo and Brand Name -->
             <div class="flex items-center">

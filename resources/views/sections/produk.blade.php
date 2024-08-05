@@ -1,5 +1,5 @@
 <section class="produk-section w-full bg-white grow-0 shrink-0">
-    <div id="collectionContainer" class="wrapper80 flex flex-col grow-0 shrink-0 px-10 py-10 mx-auto gap-y-2 text-center">
+    <div id="collectionContainer" class="wrapper90 flex flex-col grow-0 shrink-0 px-10 py-10 mx-auto gap-y-2 text-center">
         <div class="w-full flex flex-col items-center gap-y-2">
             <h2 class="textJudul w-fit border-b-[3px] border-black pb-1 px-5">Categories</h2>
             <h4>Cari Kategori sesuai Keinginan mu di bawah ini</h4>
@@ -70,8 +70,8 @@
         <div class="lg:max-w-[80%] w-full mx-auto grid xl:grid-cols-4 md:grid-cols-2 ">
             <!-- Brand new Items -->
             <div
-                class="mx-auto mt-11 w-72 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
-                <img class="h-52 w-full object-cover object-center relative"
+                class="mx-auto mt-11 w-64 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
+                <img class="h-48 w-full object-cover object-center relative"
                     src="https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                     alt="Product Image" />
                 <span
@@ -82,8 +82,8 @@
                 </div>
             </div>
             <div
-                class="mx-auto mt-11 w-72 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
-                <img class="h-52 w-full object-cover object-center relative"
+                class="mx-auto mt-11 w-64 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
+                <img class="h-48 w-full object-cover object-center relative"
                     src="https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                     alt="Product Image" />
                 <span
@@ -94,8 +94,8 @@
                 </div>
             </div>
             <div
-                class="mx-auto mt-11 w-72 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
-                <img class="h-52 w-full object-cover object-center relative"
+                class="mx-auto mt-11 w-64 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
+                <img class="h-48 w-full object-cover object-center relative"
                     src="https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                     alt="Product Image" />
                 <span
@@ -106,8 +106,8 @@
                 </div>
             </div>
             <div
-                class="mx-auto mt-11 w-72 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
-                <img class="h-52 w-full object-cover object-center relative"
+                class="mx-auto mt-11 w-64 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
+                <img class="h-48 w-full object-cover object-center relative"
                     src="https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                     alt="Product Image" />
                 <span
@@ -118,8 +118,8 @@
                 </div>
             </div>
             <div
-                class="mx-auto mt-11 w-72 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
-                <img class="h-52 w-full object-cover object-center relative"
+                class="mx-auto mt-11 w-64 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
+                <img class="h-48 w-full object-cover object-center relative"
                     src="https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                     alt="Product Image" />
                 <span
@@ -130,8 +130,8 @@
                 </div>
             </div>
             <div
-                class="mx-auto mt-11 w-72 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
-                <img class="h-52 w-full object-cover object-center relative"
+                class="mx-auto mt-11 w-64 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
+                <img class="h-48 w-full object-cover object-center relative"
                     src="https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                     alt="Product Image" />
                 <span
@@ -142,8 +142,8 @@
                 </div>
             </div>
             <div
-                class="mx-auto mt-11 w-72 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
-                <img class="h-52 w-full object-cover object-center relative"
+                class="mx-auto mt-11 w-64 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
+                <img class="h-48 w-full object-cover object-center relative"
                     src="https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                     alt="Product Image" />
                 <span
@@ -154,8 +154,8 @@
                 </div>
             </div>
             <div
-                class="mx-auto mt-11 w-72 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
-                <img class="h-52 w-full object-cover object-center relative"
+                class="mx-auto mt-11 w-64 transform overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-lg font-poppins">
+                <img class="h-48 w-full object-cover object-center relative"
                     src="https://images.unsplash.com/photo-1674296115670-8f0e92b1fddb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                     alt="Product Image" />
                 <span

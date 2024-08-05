@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global */
+
+body {
+    width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -11,10 +17,51 @@ input {
     @apply font-poppins;
 }
 
+
+.wrapper90 {
+    @apply xl:w-[90%] w-full;
+}
+
+.textJudul {
+    @apply font-poppins text-3xl font-semibold;
+}
+
+.textProduk {
+    @apply font-poppins text-xl tracking-wide;
+}
+
+.textQty {
+    @apply text-gray-500 text-xs tracking-wide;
+}
+
+.textHarga {
+    @apply text-red-600 font-poppins font-medium text-[16px] tracking-wide;
+}
+
+/* Hero Home */
+.hero {
+    object-fit: cover;
+    object-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    position: relative;
+}
+
+.indicator-button {
+    width: 12px;
+    height: 12px;
+    border: 1px solid gray;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
 /* Navbar */
 
 .garisbawah {
-    @apply flex relative h-full items-center after:absolute after:bottom-4 after:left-0 after:h-1 after:bg-blue-600 after:right-0 after:rounded-lg after:hover:w-full after:w-0 after:duration-300 after:ease-in-out;
+    @apply flex relative h-full items-center after:absolute after:bottom-0 after:left-0 after:h-1 after:bg-blue-600 after:right-0 after:rounded-lg after:hover:w-full after:w-0 after:duration-300 after:ease-in-out;
 }
 
 /* Drop Down */
@@ -59,27 +106,6 @@ input {
     to {
         opacity: 0;
     }
-}
-/* Scafolding */
-
-.wrapper80 {
-    @apply lg:w-[80%] w-full;
-}
-
-.textJudul {
-    @apply font-poppins text-3xl font-semibold;
-}
-
-.textProduk {
-    @apply font-poppins text-xl tracking-wide;
-}
-
-.textQty {
-    @apply text-gray-500 text-xs tracking-wide;
-}
-
-.textHarga {
-    @apply text-red-600 font-poppins font-medium text-[16px] tracking-wide;
 }
 
 /* Overlay */
