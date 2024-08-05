@@ -9,7 +9,7 @@
                 <div class="w-full h-fit shadow-xl rounded-xl flex flex-col md:flex-row p-5">
                     <div class="md:w-1/3 w-full flex md:justify-start justify-center mb-5 md:mb-0">
                         <div class="w-fit h-fit rounded-full relative">
-                            <img id="profileImage" src="{{ asset('/image/hero.png') }}" alt="Profile Image"
+                            <img id="profileImage" src="{{ asset('/image/hero1.png') }}" alt="Profile Image"
                                 class="xl:size-64 md:size-40 size-36 rounded-full object-cover object-center relative">
                             <div class="w-10 h-10 rounded-full absolute xl:bottom-4 xl:right-5 md:bottom-1 md:right-1 bottom-0 right-0 bg-black">
                                 <label for="userPicture" class="text-xs cursor-pointer">

@@ -15,7 +15,7 @@
         <div class="grid grid-flow-row row-span-5 gap-y-5 overflow-y-auto scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-thumb-slate-700 scrollbar-track-slate-300">
             <div class="cartProduct flex flex-row gap-x-2 h-36 w-full px-5 border-b">
                 <div class="p-1 max-w-1/3 relative">
-                    <img src="{{asset('image/hero.png')}}" alt="Gambar Product" class="h-full w-36 object-center object-cover rounded-lg ">
+                    <img src="{{asset('image/hero1.png')}}" alt="Gambar Product" class="h-full w-36 object-center object-cover rounded-lg ">
                     <button class="group absolute top-0 left-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-white group-hover:fill-red-500 group-hover:text-white group-hover:border-white" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                       </svg>
@@ -29,7 +29,7 @@
             </div>
             <div class="cartProduct flex flex-row gap-x-2 h-36 w-full px-5 border-b">
                 <div class="p-1 max-w-1/3 relative">
-                    <img src="{{asset('image/hero.png')}}" alt="Gambar Product" class="h-full w-36 object-center object-cover rounded-lg ">
+                    <img src="{{asset('image/hero1.png')}}" alt="Gambar Product" class="h-full w-36 object-center object-cover rounded-lg ">
                     <button class="group absolute top-0 left-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-white group-hover:fill-red-500 group-hover:text-white group-hover:border-white" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                       </svg>
@@ -43,7 +43,7 @@
             </div>
             <div class="cartProduct flex flex-row gap-x-2 h-36 w-full px-5 border-b">
                 <div class="p-1 max-w-1/3 relative">
-                    <img src="{{asset('image/hero.png')}}" alt="Gambar Product" class="h-full w-36 object-center object-cover rounded-lg ">
+                    <img src="{{asset('image/hero1.png')}}" alt="Gambar Product" class="h-full w-36 object-center object-cover rounded-lg ">
                     <button class="group absolute top-0 left-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-white group-hover:fill-red-500 group-hover:text-white group-hover:border-white" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                       </svg>
@@ -57,7 +57,7 @@
             </div>
             <div class="cartProduct flex flex-row gap-x-2 h-36 w-full px-5 border-b">
                 <div class="p-1 max-w-1/3 relative">
-                    <img src="{{asset('image/hero.png')}}" alt="Gambar Product" class="h-full w-36 object-center object-cover rounded-lg ">
+                    <img src="{{asset('image/hero1.png')}}" alt="Gambar Product" class="h-full w-36 object-center object-cover rounded-lg ">
                     <button class="group absolute top-0 left-0"><svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-white group-hover:fill-red-500 group-hover:text-white group-hover:border-white" viewBox="0 0 24 24" stroke-width="0.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                       </svg>
