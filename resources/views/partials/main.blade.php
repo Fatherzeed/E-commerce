@@ -27,7 +27,6 @@
 
 
     <script src="/js/partials.js"></script>
-    <script src="/js/homeProduct.js"></script>
     <script src="/js/login.js"></script>
     <script src="/build/assets/app-9b01a8f6.js"></script>
     <script type="text/javascript" src="{{ asset('js/sweetalert2.js') }}"></script>
