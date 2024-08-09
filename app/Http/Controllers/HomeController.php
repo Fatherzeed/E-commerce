@@ -17,7 +17,7 @@ class HomeController extends Controller
         
 
         // return view('home/indexhome', compact('accessToken', 'refreshToken', 'name'));
-        return view('home/indexhome', compact('username', 'uuid'));
+        return view('homePage/indexhome', compact('username', 'uuid'));
         // return view('home/indexhome');
     }
 

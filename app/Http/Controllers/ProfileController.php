@@ -19,7 +19,11 @@ class ProfileController extends Controller
         $username = Session::get('username');
         $uuid = Session::get('uuid');
 
-        return view('profile.profil', compact('username', 'uuid'));
+        return view('profilePage.profil', compact('username', 'uuid'));
+    }
+
+    public function addressView(){
+        return view('profilePage.address');
     }
 
     /**
