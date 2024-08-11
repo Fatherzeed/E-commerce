@@ -48,8 +48,8 @@ class ProfileController extends Controller
         if ($request->hasFile('userPicture')) {
             $file = $request->file('userPicture');
             $hashedName = Str::random(40) . '.' . $file->getClientOriginalExtension();
-            $filePath = $file->storeAs('public/images', $hashedName);
-            $validatedData['userPicture'] = Storage::url($filePath); // Store the URL path of the image
+            $filePath = $file->storeAs('uploads', $hashedName);
+            $validatedData['userPicture'] = 'storage/'.$filePath; // Store the URL path of the image
         }
 
         // Check the validated data
