@@ -25,6 +25,12 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/categories', function() {
     return view('home.categories');
 });
+Route::get('/categori', function() {
+    return view('categori.categori');
+});
+Route::get('/detailcategori', function() {
+    return view('categori.detailkategori');
+});
 Route::get('/detail', function() {
     return view('produk.detailproduk');
 });

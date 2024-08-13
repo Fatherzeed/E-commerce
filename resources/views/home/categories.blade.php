@@ -7,16 +7,13 @@
 
     <section class="bg-blue-500">
         <div class="py-5 mx-auto">
-            <h1 class="textJudul text-center">All Categories</h1>
+            <h1 class="textJudul text-center text-white">All Categories</h1>
         </div>
 
     </section>
 
   
     @include('sections.kategori')
-    <section class="h-[100dvh] bg-white">
-
-    </section>
     @include('partials.footer')
 @endsection
 

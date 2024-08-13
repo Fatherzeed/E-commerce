@@ -16,9 +16,7 @@
             </div>
     </section>
 
-
-    @include('sections.populer')
-    @include('sections.kategori-produk')
+    @include('categori.produk.kategori-produk')
 
     @include('partials.footer')
 @endsection
