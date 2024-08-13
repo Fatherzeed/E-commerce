@@ -23,7 +23,7 @@ use App\Http\Controllers\ProfileController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/categories', function() {
-    return view('home.categories');
+    return view('categoriPage.categories');
 });
 Route::get('/categori', function() {
     return view('categori.categori');
@@ -32,12 +32,13 @@ Route::get('/detailcategori', function() {
     return view('categori.detailkategori');
 });
 Route::get('/detail', function() {
-    return view('produk.detailproduk');
+    return view('produkPage.detailproduk');
 });
 
 // test Update Profile
 Route::match(['GET', 'POST'],'/update-profile', [ProfileController::class, 'updateProfile'])->name('update-profile');
 Route::match(['GET', 'POST'],'/profile', [ProfileController::class, 'profileView'])->name('profile');
+Route::match(['GET', 'POST'],'/address', [ProfileController::class, 'addressView'])->name('address');
 
 
 //Login

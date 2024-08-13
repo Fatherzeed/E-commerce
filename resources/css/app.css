@@ -27,15 +27,15 @@ input {
 }
 
 .textProduk {
-    @apply font-poppins text-xl tracking-wide;
+    @apply font-poppins lg:text-[1.1rem] text-[1em];
 }
 
 .textQty {
-    @apply text-gray-500 text-xs tracking-wide;
+    @apply text-gray-500 text-[1em] tracking-wide;
 }
 
 .textHarga {
-    @apply text-red-600 font-poppins font-medium text-[16px] tracking-wide;
+    @apply text-red-600 font-poppins font-medium text-[1em] tracking-wide;
 }
 
 

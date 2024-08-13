@@ -22,8 +22,8 @@ class LoginController extends Controller
 
 
 
-        // return view('home/indexhome', compact('accessToken', 'refreshToken', 'name'));
-        return view('user.login');
+        // return view('homePage/indexhome', compact('accessToken', 'refreshToken', 'name'));
+        return view('userPage.login');
     }
 
 

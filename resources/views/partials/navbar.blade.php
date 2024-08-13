@@ -1,5 +1,5 @@
 <nav class="bg-white shadow-lg w-full sticky top-0 z-20">
-    <div class="nav-container wrapper90 flex lg:max-w-6xl h-14 mx-auto">
+    <div class="nav-container wrapper90 flex h-14 mx-auto">
         <div class="content grid grid-cols-5 px-4 w-full">
             <!-- Logo and Brand Name -->
             <div class="flex items-center">
@@ -55,7 +55,7 @@
                         stroke="currentColor" class="w-3 group-hover:text-blue-600 duration-300 ease-in-out ml-1">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                     </svg>
-                    <div class="absolute hidden top-[100%] lg:left-[-5%] left-[-20%] w-32 h-auto" id="dropdownContainer">
+                    <div class="absolute hidden top-[100%] lg:left-[-2em] left-[-2em] w-32 h-auto" id="dropdownContainer">
                         <ul class="flex flex-col items-center shadow-lg border-t-4 border-blue-600 bg-blue-600 rounded-b-lg">
                             <a class="dropdownContent w-full p-2 " href="{{route('login')}}">
                                 <li>Login</li>
