@@ -26,10 +26,10 @@ Route::get('/categories', function() {
     return view('categoriPage.categories');
 });
 Route::get('/categori', function() {
-    return view('categori.categori');
+    return view('categoriPage.categori');
 });
 Route::get('/detailcategori', function() {
-    return view('categori.detailkategori');
+    return view('categoriPage.detailkategori');
 });
 Route::get('/detail', function() {
     return view('produkPage.detailproduk');

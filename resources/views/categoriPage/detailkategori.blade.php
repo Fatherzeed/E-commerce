@@ -16,7 +16,7 @@
             </div>
     </section>
 
-    @include('categori.produk.kategori-produk')
+    @include('categoriPage.produk.kategori-produk')
 
     @include('partials.footer')
 @endsection
