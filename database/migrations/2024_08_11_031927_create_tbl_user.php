@@ -14,15 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tbl_user', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
+            $table->string('uuid')->unique();
             $table->string('username');
+            $table->string('email')->unique();
             $table->string('password');
-            $table->string('email');
-            $table->string('nomor');
-            $table->string('gender');
-            $table->date('tanggal_lahir');
-            $table->string('user_picture');
-            $table->foreign('role_id')->references('id')->on('tbl_role');
+            $table->enum('gender', ['male', 'female'])->nullable();
+            $table->date('birth_date')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('profile_photo')->nullable();
+            $table->foreignId('role_id')->constrained('tbl_role');
             $table->timestamps();
         });
     }
