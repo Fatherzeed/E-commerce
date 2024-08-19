@@ -5,7 +5,7 @@
     @include('partials.cart')
     <div class="w-full min-h-[100dvh] h-auto">
         <div class="h-full flex mx-auto justify-center">
-            <div class="wrapper90 h-full flex lg:flex-row flex-col justify-center">
+            <div class="wrapper90 h-full flex lg:flex-row flex-col justify-center py-5">
                 @include('profilePage.sidebar')
                 <div class="w-full flex-col flex gap-y-5">
                     <div class="w-full h-fit shadow-xl rounded-xl flex flex-col md:flex-row p-5">
@@ -145,6 +145,7 @@
 
 @section('script')
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/profile.js"></script>
     <script>
         $(document).ready(function() {
             function toggleForm(enabled) {
