@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('uuid')->unique();
             $table->string('username');
+            $table->string('full_name')->nullable();
             $table->string('email')->unique();
             $table->string('password');
             $table->enum('gender', ['male', 'female'])->nullable();

@@ -11,7 +11,7 @@
                     <div class="w-full h-fit shadow-xl rounded-xl flex flex-col md:flex-row p-5">
                         <div class="md:w-1/3 w-full flex md:justify-start justify-center mb-5 md:mb-0">
                             <div class="w-fit h-fit rounded-full relative">
-                                <img id="profileImage" src="{{ asset('/image/hero1.png') }}" alt="Profile Image"
+                                <img id="profileImage" src="{{ Auth::user()->profile_photo ?? '' }}" alt="Profile Image"
                                     class="xl:size-64 md:size-40 size-36 rounded-full object-cover object-center relative">
                                 <div
                                     class="w-10 h-10 rounded-full absolute xl:bottom-4 xl:right-5 md:bottom-1 md:right-1 bottom-0 right-0 bg-black">
@@ -52,31 +52,26 @@
                                         </div>
                                         <div class="col-span-3 flex flex-col gap-y-3">
                                             <input id="namaUser" name="namaUser" type="text"
-                                                value="{{ $fullName ?? 'John Doe' }}"
+                                                value="{{ Auth::user()->full_name ?? 'John Doe' }}"
                                                 class="bg-gray-50 p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                 disabled>
                                             <input id="tgllahirUser" name="tgllahirUser" type="date"
-                                                value="{{ $birth_date ?? '2001-11-09' }}"
+                                                value="{{ Auth::user()->birth_date ?? '' }}"
                                                 class="bg-gray-50 p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                 disabled>
                                             <select id="genderUser" name="genderUser"
                                                 class="bg-gray-50 p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                 disabled>
-                                                <option selected="">Open this Selection menu</option>
-                                                <option class="text-gray-900" value="Laki-laki">Laki-laki</option>
-                                                <option class="text-gray-900" value="Perempuan">Perempuan</option>
+                                                <option value="" {{ Auth::user()->gender == null ? 'selected' : '' }}>
+                                                    Open this selection menu</option>
+                                                <option class="text-gray-900" value="male"
+                                                    {{ Auth::user()->gender == 'male' ? 'selected' : '' }}>Laki-laki
+                                                </option>
+                                                <option class="text-gray-900" value="female"
+                                                    {{ Auth::user()->gender == 'female' ? 'selected' : '' }}>Perempuan
+                                                </option>
                                             </select>
-                                            {{-- Nanti setelah database sudah ada  --}}
-                                            {{-- <select id="genderUser" name="genderUser"
-                                            class="bg-gray-50 p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                            disabled>
-                                            <option value="" disabled {{ empty($genderUser) ? 'selected' : '' }}>
-                                                Select an option</option>
-                                            <option class="text-gray-900" value="Laki-laki"
-                                                {{ $genderUser == 'Laki-laki' ? 'selected' : '' }}>Laki-laki</option>
-                                            <option class="text-gray-900" value="Perempuan"
-                                                {{ $genderUser == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
-                                        </select> --}}
+
                                         </div>
 
                                     </div>
@@ -90,10 +85,11 @@
                                         </div>
                                         <div class="col-span-3 flex flex-col gap-y-3">
                                             <input id="emailUser" name="emailUser" type="email"
-                                                value="ContohValue@example.com"
+                                                value="{{ Auth::user()->email ?? 'contohemail@example.com' }}"
                                                 class="bg-gray-50 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500  rounded-md border border-gray-300"
                                                 disabled>
-                                            <input id="nomorUser" name="nomorUser" type="text" value="0899xxxxxxxx"
+                                            <input id="nomorUser" name="nomorUser" type="text"
+                                                value="{{ Auth::user()->phone ?? '082154845769' }}"
                                                 class="bg-gray-50 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500  rounded-md border border-gray-300"
                                                 disabled>
                                         </div>
@@ -128,12 +124,15 @@
                                 <span
                                     class="text-[0.8em] text-gray-400">({{ $patokanAlamat ?? 'Rumah dengan pagar hitam' }})</span>
                             </p>
-                            <button class="group px-4 py-1 mt-2 flex items-center gap-x-2 border-2 border-active-200 text-active-200 font-semibold rounded-full w-fit hover:bg-active-200 hover:text-white"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-active-200 group-hover:text-white">
+                            <button
+                                class="group px-4 py-1 mt-2 flex items-center gap-x-2 border-2 border-active-200 text-active-200 font-semibold rounded-full w-fit hover:bg-active-200 hover:text-white"><svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor"
+                                    class="size-4 text-active-200 group-hover:text-white">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                                 </svg>
-                            Edit Address</button>
+                                Edit Address</button>
                         </div>
                     </div>
                 </div>
@@ -183,7 +182,9 @@
                 }
             });
 
-            $('#saveBtn').click(function() {
+            $('#saveBtn').click(function(event) {
+                event.preventDefault(); // Prevent the form from submitting immediately
+
                 Swal.fire({
                     title: 'Yakin ingin mengupdate data?',
                     showCancelButton: true,
@@ -199,13 +200,12 @@
                         formData.append('genderUser', $('#genderUser').val());
                         formData.append('emailUser', $('#emailUser').val());
                         formData.append('nomorUser', $('#nomorUser').val());
-                        formData.append('userPicture', $('#userPicture')[0].files[0]);
 
-
-                        for (let pair of formData.entries()) {
-                            console.log(pair[0] + ': ' + pair[1]);
+                        // Hanya tambahkan userPicture jika ada file yang dipilih
+                        const userPicture = $('#userPicture')[0].files[0];
+                        if (userPicture) {
+                            formData.append('userPicture', userPicture);
                         }
-
 
                         $.ajax({
                             url: '{{ route('update-profile') }}',
@@ -238,7 +238,6 @@
                     }
                 });
             });
-
         });
     </script>
 @endsection

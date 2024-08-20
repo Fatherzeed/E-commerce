@@ -4,6 +4,12 @@
     @include('partials.navbar')
     @include('partials.cart')
 
+    @guest
+        <h1>Tahukah kamu kalau kamu adalah Guest? belum login lho</h1>
+    @endguest
+    @auth
+        <h1>Halo, kamu adalah {{ Auth::user()->username }} selamat datang</h1>
+    @endauth
     <section class="hero wrapper90 flex h-[70dvh] items-center grow-0 shrink-0 w-full mx-auto relative" id="heroArea">
         <div class="overlay-hero absolute top-0 h-full w-full bg-black"></div>
         <div class="wrapper90 h-full md:mx-auto relative">

@@ -24,21 +24,21 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/categories', function() {
     return view('categoriPage.categories');
-});
+})->middleware('auth');
 Route::get('/categori', function() {
     return view('categoriPage.categori');
-});
+})->middleware('auth');
 Route::get('/detailcategori', function() {
     return view('categoriPage.detailkategori');
-});
+})->middleware('auth');
 Route::get('/detail', function() {
     return view('produkPage.detailproduk');
-});
+})->middleware('auth');
 
 // test Update Profile
 Route::match(['GET', 'POST'],'/update-profile', [ProfileController::class, 'updateProfile'])->name('update-profile');
-Route::match(['GET', 'POST'],'/profile', [ProfileController::class, 'profileView'])->name('profile');
-Route::match(['GET', 'POST'],'/address', [ProfileController::class, 'addressView'])->name('address');
+Route::GET('/profile', [ProfileController::class, 'profileView'])->name('profile')->middleware('auth');
+Route::GET('/address', [ProfileController::class, 'addressView'])->name('address')->middleware('auth');
 
 
 //Login
