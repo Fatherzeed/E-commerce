@@ -27,7 +27,7 @@
                 </form>
                 <a href="{{ route('home') }}"
                     class="h-full hidden xl:flex items-center border-b-[4px] border-transparent hover:text-blue-600 hover:scale-105 hover:border-blue-600 font-poppins duration-300 hover:skew-x-10 ease-in-out">Home</a>
-                <a href="#"
+                <a href="/categories"
                     class="h-full flex items-center font-poppins border-b-[4px] border-transparent hover:text-blue-600 hover:scale-105 hover:border-blue-600 duration-300 hover:skew-x-10 ease-in-out">Categories</a>
             </div>
 
