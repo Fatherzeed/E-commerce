@@ -80,6 +80,15 @@ class ProfileController extends Controller
 
         // Handle file upload hanya jika ada file yang diunggah
         if ($request->hasFile('userPicture')) {
+            // Hapus file lama jika ada
+            if ($user->profile_photo) {
+                $oldFilePath = public_path($user->profile_photo);
+                if (file_exists($oldFilePath)) {
+                    unlink($oldFilePath);
+                }
+            }
+
+            // Upload file baru
             $file = $request->file('userPicture');
             $hashedName = Str::random(40) . '.' . $file->getClientOriginalExtension();
             $filePath = $file->storeAs('uploads', $hashedName);

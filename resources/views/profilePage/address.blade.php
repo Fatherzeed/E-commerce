@@ -68,6 +68,24 @@
                         </div>
                     </div>
 
+                    <div class="w-full h-full px-5">
+                        <div class="w-full h-full bg-white rounded-xl shadow-xl border-2 border-active-200">
+                            <button
+                                class="group w-full h-[4em] flex items-center justify-center gap-x-2 text-active-200 font-semibold rounded-lg hover:bg-active-200 hover:text-white"
+                                data-modal-target="#modalAddAddress">
+                                <div class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                    </svg>
+
+                                    Add Address</div>
+
+                            </button>
+                        </div>
+                    </div>
+
+
                 </div>
                 @include('profilePage.modalAddress')
             </div>

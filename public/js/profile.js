@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // Toggle modal on button click
     $("[data-modal-target]").on("click", function () {
-        var targetModal = $(this).attr("data-modal-target");
+        const targetModal = $(this).attr("data-modal-target");
         $(targetModal).removeClass("hidden");
     });
 

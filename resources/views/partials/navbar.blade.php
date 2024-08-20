@@ -43,12 +43,15 @@
                 </button>
                 <div id="profileContainer"
                     class="group relative h-full ml-5 flex items-center cursor-pointer border-b-4 border-transparent hover:border-blue-600 duration-300 ease-in-out">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2"
-                        stroke="currentColor" class="w-8 group-hover:text-blue-600 duration-300 ease-in-out">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                    </svg>
+                    @guest
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2"
+                            stroke="currentColor" class="w-8 group-hover:text-blue-600 duration-300 ease-in-out">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                    @endguest
                     @auth
+                        <img src="{{ Auth::user()->profile_photo }}" class="w-8 h-8 rounded-full object-cover object-top" alt="">
                         <h4 class="pl-1 font-poppins group-hover:text-blue-600 duration-300 ease-in-out select-none">
                             @if (Auth::check())
                                 {{ Auth::user()->username }}
@@ -61,7 +64,8 @@
                         class="w-3 group-hover:text-blue-600 duration-300 ease-in-out ml-1">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                     </svg>
-                    <div class="absolute hidden top-[100%] @if (Auth::check()) inset @else left-[-2em] @endif w-32 h-auto" id="dropdownContainer">
+                    <div class="absolute hidden top-[100%] @if (Auth::check()) inset @else left-[-2em] @endif w-32 h-auto"
+                        id="dropdownContainer">
                         <ul
                             class="flex flex-col items-center shadow-lg border-t-4 border-blue-600 bg-blue-600 rounded-b-lg">
                             @guest

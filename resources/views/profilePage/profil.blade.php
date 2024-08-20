@@ -201,9 +201,19 @@
                         formData.append('emailUser', $('#emailUser').val());
                         formData.append('nomorUser', $('#nomorUser').val());
 
-                        // Hanya tambahkan userPicture jika ada file yang dipilih
                         const userPicture = $('#userPicture')[0].files[0];
+
                         if (userPicture) {
+                            // Cek ukuran file sebelum menambahkannya ke formData
+                            if (userPicture.size > 2 * 1024 * 1024) { // 2 MB dalam byte
+                                Swal.fire({
+                                    title: 'Error!',
+                                    text: 'Your profile picture must be less than 2 MB.',
+                                    icon: 'error',
+                                    confirmButtonText: 'OK'
+                                });
+                                return; // Hentikan eksekusi jika file terlalu besar
+                            }
                             formData.append('userPicture', userPicture);
                         }
 
@@ -238,6 +248,7 @@
                     }
                 });
             });
+
         });
     </script>
 @endsection
