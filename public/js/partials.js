@@ -17,6 +17,18 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function(){
+    $("#mobileMenuButton").click(function(){
+        $(".md\\:hidden").slideToggle();
+        $("#closeMobileMenu").show();
+    });
+    $("#closeMobileMenu").click(function(){
+        $(".md\\:hidden").slideToggle();
+        $("#closeMobileMenu").hide();
+    });
+});
+
+
 
 
 

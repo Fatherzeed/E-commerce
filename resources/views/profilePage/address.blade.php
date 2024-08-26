@@ -3,7 +3,7 @@
 @section('content')
     @include('partials.navbar')
     @include('partials.cart')
-    <div class="w-full min-h-[100dvh] h-auto">
+    <div class="w-full min-h-[80dvh] h-auto">
         <div class="h-full flex mx-auto justify-center">
             <div class="wrapper90 h-full flex lg:flex-row flex-col justify-center py-5">
                 @include('profilePage.sidebar')
@@ -27,7 +27,7 @@
                             </p>
                             <button
                                 class="group px-4 py-1 mt-2 flex items-center gap-x-2 border-2 border-active-200 text-active-200 font-semibold rounded-full w-fit hover:bg-active-200 hover:text-white"
-                                data-modal-target="#modalAddress">
+                                data-modal-target="#editAddress">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor"
                                     class="size-4 text-active-200 group-hover:text-white">
@@ -60,7 +60,8 @@
                             <button
                                 class="group px-4 py-1 mt-2 flex items-center gap-x-2 border-2 border-active-200 text-active-200 font-semibold rounded-full w-fit hover:bg-active-200 hover:text-white"><svg
                                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" class="size-4 text-active-200 group-hover:text-white">
+                                    stroke="currentColor" class="size-4 text-active-200 group-hover:text-white"
+                                    data-modal-target="#editAddress">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                                 </svg>
@@ -72,14 +73,15 @@
                         <div class="w-full h-full bg-white rounded-xl shadow-xl border-2 border-active-200">
                             <button
                                 class="group w-full h-[4em] flex items-center justify-center gap-x-2 text-active-200 font-semibold rounded-lg hover:bg-active-200 hover:text-white"
-                                data-modal-target="#modalAddAddress">
+                                data-modal-target="#addAddress">
                                 <div class="flex">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="size-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                                     </svg>
 
-                                    Add Address</div>
+                                    Add Address
+                                </div>
 
                             </button>
                         </div>
@@ -87,7 +89,8 @@
 
 
                 </div>
-                @include('profilePage.modalAddress')
+                @include('profilePage.editAddress')
+                @include('profilePage.addAddress')
             </div>
         </div>
 

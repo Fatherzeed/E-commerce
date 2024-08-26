@@ -22,21 +22,21 @@ use App\Http\Controllers\ProfileController;
 //Home
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/categories', function() {
+Route::get('/categories', function () {
     return view('categoriPage.categories');
-})->middleware('auth');
-Route::get('/categori', function() {
+});
+Route::get('/categori', function () {
     return view('categoriPage.categori');
-})->middleware('auth');
-Route::get('/detailcategori', function() {
+});
+Route::get('/detailcategori', function () {
     return view('categoriPage.detailkategori');
-})->middleware('auth');
-Route::get('/detail', function() {
+});
+Route::get('/detail', function () {
     return view('produkPage.detailproduk');
-})->middleware('auth');
+});
 
 // test Update Profile
-Route::match(['GET', 'POST'],'/update-profile', [ProfileController::class, 'updateProfile'])->name('update-profile');
+Route::match(['GET', 'POST'], '/update-profile', [ProfileController::class, 'updateProfile'])->name('update-profile');
 Route::GET('/profile', [ProfileController::class, 'profileView'])->name('profile')->middleware('auth');
 Route::GET('/address', [ProfileController::class, 'addressView'])->name('address')->middleware('auth');
 
@@ -46,5 +46,3 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/ceklogin', [LoginController::class, 'login'])->name('ceklogin');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::post('/login/registrasi', [LoginController::class, 'registrasi'])->name('registrasi');
-
-

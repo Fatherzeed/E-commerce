@@ -2,7 +2,7 @@
     <div class="nav-container wrapper90 flex h-14 mx-auto">
         <div class="content grid grid-cols-5 px-4 w-full">
             <!-- Logo and Brand Name -->
-            <div class="flex items-center">
+            <div class="flex items-center col-span-4 md:col-span-1">
                 <a href="{{ route('home') }}"
                     class="flex items-center hover:scale-105 duration-300 hover:skew-x-10 ease-in-out">
                     <span
@@ -15,7 +15,7 @@
                 <form action="" method="GET"
                     class="group flex w-full items-center hover:scale-105 duration-300 hover:skew-x-10 ease-in-out">
                     <input type="search" placeholder="Search Here..." aria-label="Search"
-                        class="h-10 flex-grow px-4 py-2 rounded-l-xl border-2 border-r-0 text-sm font-poppins group-hover:border-blue-700 focus:outline-none" />
+                        class="h-10 flex-grow px-4 py-2 rounded-l-xl border-2 border-r-0 text-xs font-poppins group-hover:border-blue-700 focus:outline-none" />
                     <button type="submit"
                         class="group h-10 px-4 py-2 border-2 border-l-0 rounded-r-xl group-hover:border-blue-700 -ml-px group-hover:bg-blue-600">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -26,9 +26,9 @@
                     </button>
                 </form>
                 <a href="{{ route('home') }}"
-                    class="h-full hidden xl:flex items-center border-b-[4px] border-transparent hover:text-blue-600 hover:scale-105 hover:border-blue-600 font-poppins duration-300 hover:skew-x-10 ease-in-out">Home</a>
+                    class="h-full hidden xl:flex items-center border-b-[4px] border-transparent hover:text-blue-600 hover:scale-105 hover:border-blue-600 font-poppins text-sm duration-300 hover:skew-x-10 ease-in-out">Home</a>
                 <a href="/categories"
-                    class="h-full flex items-center font-poppins border-b-[4px] border-transparent hover:text-blue-600 hover:scale-105 hover:border-blue-600 duration-300 hover:skew-x-10 ease-in-out">Categories</a>
+                    class="h-full flex items-center font-poppins border-b-[4px] border-transparent hover:text-blue-600 hover:scale-105 hover:border-blue-600 text-sm duration-300 hover:skew-x-10 ease-in-out">Categories</a>
             </div>
 
             <!-- User Info and Cart Button -->
@@ -51,8 +51,10 @@
                         </svg>
                     @endguest
                     @auth
-                        <img src="{{ Auth::user()->profile_photo }}" class="w-8 h-8 rounded-full object-cover object-top" alt="">
-                        <h4 class="pl-1 font-poppins group-hover:text-blue-600 duration-300 ease-in-out select-none">
+                        <img src="{{ Auth::user()->profile_photo }}" class="w-8 h-8 rounded-full object-cover object-top"
+                            alt="">
+                        <h4
+                            class="pl-1 font-poppins text-sm group-hover:text-blue-600 duration-300 ease-in-out select-none">
                             @if (Auth::check())
                                 {{ Auth::user()->username }}
                             @else
@@ -69,26 +71,72 @@
                         <ul
                             class="flex flex-col items-center shadow-lg border-t-4 border-blue-600 bg-blue-600 rounded-b-lg">
                             @guest
-                                <a class="dropdownContent w-full p-2 " href="{{ route('login') }}">
+                                <a class="dropdownContent w-full text-xs p-2 " href="{{ route('login') }}">
                                     <li>Login</li>
                                 </a>
                             @endguest
                             @auth
-                                <a class="dropdownContent w-full p-2 " href="{{ route('profile') }}">
+                                <a class="dropdownContent w-full text-xs p-2 " href="{{ route('profile') }}">
                                     <li>My Profile</li>
                                 </a>
-                                <a class="dropdownContent w-full p-2 " href="#">
+                                <a class="dropdownContent w-full text-xs p-2 " href="#">
                                     <li>Edit Profile</li>
                                 </a>
                                 <hr>
-                                <a class="dropdownContent w-full p-2 rounded-b-lg" href="{{ route('logout') }}">
+                                <a class="dropdownContent w-full text-xs p-2 rounded-b-lg" href="{{ route('logout') }}">
                                     <li>Logout</li>
                                 </a>
                             @endauth
                         </ul>
                     </div>
+
                 </div>
             </div>
+
+            <div class="md:hidden flex items-center justify-center">
+                <button class="" id="mobileMenuButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6 text-gray-600 hover:text-gray-800 ">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden fixed z-[2] inset-0 bg-gray-800 bg-opacity-75 overflow-y-auto h-full w-full flex flex-col items-center justify-center p-4">
+                <div class="relative w-full max-w-[400px]">
+                    <div class="relative flex flex-col w-full bg-white rounded-lg shadow-lg">
+                        <div class="flex items-center justify-between p-4 border-b border-gray-300">
+                            <h3 class="text-lg font-bold">Menu</h3>
+                            <button id="closeMobileMenu"
+                                class="text-gray-400 hover:text-gray-600 focus:outline-none transition-colors duration-200 ease-in-out">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="p-4 space-y-4">
+                            <a href="#" class="flex items-center px-4 py-2 text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded-lg transition-colors duration-200 ease-in-out">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                                Menu Item
+                            </a>
+                            <a href="#" class="flex items-center px-4 py-2 text-gray-600 hover:text-gray-800 hover:bg-gray-200 rounded-lg transition-colors duration-200 ease-in-out">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                                Menu Item
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </nav>
