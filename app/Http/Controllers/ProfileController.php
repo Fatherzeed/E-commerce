@@ -43,6 +43,42 @@ class ProfileController extends Controller
         }
     }
 
+    public function addAddress(Request $request)
+    {
+        $user = Auth::user();
+        $validatedData = $request->validate([
+            'address_label' => 'required|string',
+            'full_address' => 'required|string|max:255',
+            'note_optional' => 'required|string|max:255',
+            'receiver_name' => 'required|string|max:255',
+            'phone_number' => 'required|string|max:255',
+        ]);
+
+        $addAddress = [
+            'user_id' => $user->id,
+            'address_label' => $validatedData['address_label'],
+            'full_address' => $validatedData['full_address'],
+            'note_optional' => $validatedData['note_optional'],
+            'receiver_name' => $validatedData['receiver_name'],
+            'phone_number' => $validatedData['phone_number'],
+            'is_primary' => false,
+        ];
+        // Masukkan data ke database
+        $address = DB::table('tbl_address')->insert($addAddress);
+
+        // Jika data berhasil ditambahkan, kirim response 201
+        if ($address) {
+            return response()->json([
+                'message' => 'Address added successfully',
+                'data' => $addAddress
+            ], 201);
+        } else {
+            // Jika gagal menambah data, kirim response 500
+            return response()->json([
+                'message' => 'Failed to add address'
+            ], 500);
+        }
+    }
 
     public function addressView()
     {

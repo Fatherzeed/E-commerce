@@ -35,6 +35,9 @@ Route::get('/detail', function () {
     return view('produkPage.detailproduk');
 });
 
+// Route Address
+Route::post('/address/add',[ProfileController::class, 'addAddress'])->name('addAddress');
+
 // test Update Profile
 Route::match(['GET', 'POST'], '/update-profile', [ProfileController::class, 'updateProfile'])->name('update-profile');
 Route::GET('/profile', [ProfileController::class, 'profileView'])->name('profile')->middleware('auth');

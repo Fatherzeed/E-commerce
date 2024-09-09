@@ -16,7 +16,12 @@ return new class extends Migration
         Schema::create('tbl_address', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('tbl_user');
-            $table->text('address');
+            $table->text('address_label');
+            $table->string('full_address');
+            $table->string('note_optional');
+            $table->string('receiver_name');
+            $table->string('phone_number');
+            $table->boolean('is_primary')->default(false);
             $table->timestamps();
         });
     }

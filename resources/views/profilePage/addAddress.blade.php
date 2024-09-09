@@ -88,11 +88,8 @@
             </div>
         </div>
         <div class="mt-4">
-            <button class="w-full bg-blue-500 py-3 rounded-lg text-white hover:bg-blue-700">Add my Address</button>
+            <button type="submit" id="add_addressbtn" class="w-full bg-blue-500 py-3 rounded-lg text-white hover:bg-blue-700">Add my Address</button>
         </div>
-
-
-
 
     </div>
 </div>

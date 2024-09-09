@@ -99,4 +99,64 @@
 
 @section('script')
     <script src="/js/profile.js"></script>
+    <script>
+$(document).ready(function() {
+    $("#add_addressbtn").click(function(event) {
+        event.preventDefault();
+
+        let add_addressLabel = $("#add_addressLabel").val().trim();
+        let add_fullAddress = $("#add_fullAddress").val().trim();
+        let add_noteOptional = $("#add_noteOptional").val().trim();
+        let add_receiverName = $("#add_receiverName").val().trim();
+        let add_phoneNumber = $("#add_phoneNumber").val().trim();
+
+        $.ajax({
+            type: "POST", // Gunakan metode POST untuk menambahkan data
+            url: "{{ route('addAddress') }}", // URL endpoint untuk menambah alamat
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: {
+                address_label: add_addressLabel,
+                full_address: add_fullAddress,
+                note_optional: add_noteOptional,
+                receiver_name: add_receiverName,
+                phone_number: add_phoneNumber
+            },
+            dataType: "JSON",
+            success: function(response, status) {
+                if (status === 'success') {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Berhasil',
+                        text: 'Alamat berhasil ditambahkan!',
+                        timer: 1500,
+                        showConfirmButton: false
+                    }).then(() => {
+                        window.location.href = "{{ route('address') }}";
+                    });
+                }
+            },
+            error: function(xhr, status, error) {
+                Swal.close();
+
+                if (xhr.status === 500) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Kesalahan Server',
+                        text: 'Terjadi kesalahan pada server. Silakan coba lagi nanti.',
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Kesalahan',
+                        text: 'Terjadi kesalahan. Silakan coba lagi.',
+                    });
+                }
+            }
+        });
+    });
+});
+
+    </script>
 @endsection
